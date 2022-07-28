@@ -1,0 +1,43 @@
+[
+    {
+        "id":501,
+        "p_id":55,
+        "name": "Anti-silp Muslim prayer mat manufacturer ",
+        "price": 468,
+        "size": "75*115 ",
+        "discount": "-43%",
+        "img" :"https://i.ibb.co/86t4X7t/H2905cc64440844c880e25a28f36c953bg-jpg-960x960.webp"
+    },
+    {
+        "id":502,
+        "p_id":55,
+        "name": "Embossed Prayer Mats",
+        "price": 468,
+        "size": "70*110 cm/80*120 cm",
+        "img" :"https://i.ibb.co/HdCGVCS/502.webp"
+    },
+    {
+        "id":503,
+        "p_id":55,
+        "name": "Velvet ExquisiteTurkish Prayer Mat",
+        "price": 476,
+        "size": "80*120 cm",
+        "img" :"https://i.ibb.co/313hM1D/503.webp"
+    },
+    {
+        "id":504,
+        "p_id":55,
+        "name": "travel foldable customized design muslim prayer mat",
+        "price": 681,
+        "size": "70*110 cm/80*120 cm",
+        "img" :" https://i.ibb.co/SxnR6rt/504.webp"
+    },
+    {
+        "id":505,
+        "p_id":55,
+        "name":"Printing travel foldable customized design muslim prayer mat",
+        "price": 384,
+        "size": "70*110 cm",
+        "img" :"https://i.ibb.co/hV0p6q6/505.webp"
+    }
+]
