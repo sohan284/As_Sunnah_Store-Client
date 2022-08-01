@@ -6,6 +6,7 @@ const Borka = () => {
     const [products] = useProducts([]);
     return (
         <div>
+             <h1 className='text-primary text-5xl font-bold ml-10'>Borka</h1>
             {
 products.map(borka=><Borka1 borka={borka}></Borka1>)
             }

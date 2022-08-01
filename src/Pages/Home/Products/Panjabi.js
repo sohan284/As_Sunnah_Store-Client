@@ -6,6 +6,7 @@ const Panjabi = () => {
     const [products] = useProducts([]);
     return (
         <div>
+             <h1 className='text-primary text-5xl font-bold ml-10'>Panjabi</h1>
             {
 products.map(panjabi=><Panjabi1 panjabi={panjabi}></Panjabi1>)
             }

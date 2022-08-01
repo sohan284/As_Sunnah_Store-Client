@@ -293,6 +293,87 @@
     "discount": "-19%",
     "img": "https://i.ibb.co/gSsCJsk/111.webp"
   },
+  {
+    "id": 112,
+    "rating": "★★★★✬",
+    "p_id": 11,
+    "name": "Hadith Shankalan",
+    "price": 220,
+    "disc": [
+      {
+        "size": "4 size",
+        "shape": "Vertical",
+        "product_metarial": "Paper & Paperboard",
+        "book_cover": "Soft Cover",
+        "brand_name": "Soophie Accessory",
+        "product_type": "Book",
+        "printing_type": "Digital printing",
+        "packing": "Individual shrink wrapping",
+        "binding": "Folded Leaflet",
+        "paper_type": "Art Paper, Cardboard, Newsprint Paper, Mill board",
+        "place_origin": "Istanbul, Turkey",
+        "model_number": "quran 1",
+        "color": "pink faux leather",
+        "paper": "high quality paper"
+      }
+    ],
+    "discount": "-19%",
+    "img": "https://i.ibb.co/r20T9ds/113.jpg"
+  },
+  {
+    "id": 113,
+    "rating": "★★★★✬",
+    "p_id": 11,
+    "name": "Muslim Sharif",
+    "price": 180,
+    "disc": [
+      {
+        "size": "4 size",
+        "shape": "Vertical",
+        "product_metarial": "Paper & Paperboard",
+        "book_cover": "Soft Cover",
+        "brand_name": "Soophie Accessory",
+        "product_type": "Book",
+        "printing_type": "Digital printing",
+        "packing": "Individual shrink wrapping",
+        "binding": "Folded Leaflet",
+        "paper_type": "Art Paper, Cardboard, Newsprint Paper, Mill board",
+        "place_origin": "Istanbul, Turkey",
+        "model_number": "quran 1",
+        "color": "pink faux leather",
+        "paper": "high quality paper"
+      }
+    ],
+    "discount": "-19%",
+    "img": "https://i.ibb.co/BsDkgH8/115.jpg"
+  },
+  {
+    "id": 114,
+    "rating": "★★★★✬",
+    "p_id": 11,
+    "name": "Bukhari Sharif ,Arabic and Bangali translation (all pieces in 2 volumes)",
+    "price": 1800,
+    "disc": [
+      {
+        "size": "4 size",
+        "shape": "Vertical",
+        "product_metarial": "Paper & Paperboard",
+        "book_cover": "Soft Cover",
+        "brand_name": "Soophie Accessory",
+        "product_type": "Book",
+        "printing_type": "Digital printing",
+        "packing": "Individual shrink wrapping",
+        "binding": "Folded Leaflet",
+        "paper_type": "Art Paper, Cardboard, Newsprint Paper, Mill board",
+        "place_origin": "Istanbul, Turkey",
+        "model_number": "quran 1",
+        "color": "pink faux leather",
+        "paper": "high quality paper"
+      }
+    ],
+    "discount": "-19%",
+    "img": "https://i.ibb.co/n1VPS79/116.jpg"
+  },
 
   {
     "id": 201,

@@ -7,6 +7,7 @@ const Jainamaj = () => {
     const [products] = useProducts([]);
     return (
         <div>
+             <h1 className='text-primary text-5xl font-bold ml-10'>Jainamaj</h1>
             {
 products.map(jainamaj=><Jainamaj1 jainamaj={jainamaj}></Jainamaj1>)
             }
