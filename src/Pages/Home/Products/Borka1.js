@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Jainamaj1 = ({jainamaj}) => {
-    const {name,price,img,size,rating,discount,p_id} = jainamaj;
-    if(jainamaj.p_id === 55 ){
+const Borka1 = ({borka}) => {
+    const {name,price,img,size,rating,discount,p_id} = borka;
+    if(borka.p_id === 33 ){
     return (
       <div>
           <div class="card card-side productCard m-1 p-1">
@@ -23,4 +23,4 @@ const Jainamaj1 = ({jainamaj}) => {
     }
 };
 
-export default Jainamaj1;
+export default Borka1;
