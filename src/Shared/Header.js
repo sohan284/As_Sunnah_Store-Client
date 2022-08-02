@@ -1,14 +1,21 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { useNavigate } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from "react-router-dom";
+import auth from './../firebase.init';
 
 const Header = () => {
     const navigate = useNavigate();
+    const [user] = useAuthState(auth);
     const navigateToHome = () =>{
         navigate('/');
 
     }
     const handleLogin =()=>{
       navigate('/login');
+    }
+    const logout = () =>{
+      signOut(auth);
     }
     const handleSearch = event =>{
       event.preventDefault();
@@ -56,10 +63,16 @@ const Header = () => {
           </ul>
         </div>
         <div class="navbar-end">
-          <a onClick={handleLogin} class="button p-1 px-3 text-white font-semibold rounded">Login</a>
+          { user &&
+           <button className='font-bold text-secondary'><Link to={'/dashboard'}> <img className='w-10 mx-3 rounded-full' src={user.photoURL} alt="" /> </Link></button>}
+           
+           {user?
+           <button onClick={logout}><img className='w-10  hover:bg-black hover:rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" /></button> : <Link to={'/login'}>
+            <button><img className='w-10  hover:bg-black hover:rounded-full ' src="https://i.ibb.co/nwCs3xs/login.png" alt="" /></button></Link>}
         </div>
       </div>
     );
 };
+
 
 export default Header;

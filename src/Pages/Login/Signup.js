@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 
@@ -7,6 +7,7 @@ const Signup = () => {
     const [signInWithGoogle] = useSignInWithGoogle(auth);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const location = useLocation();
     const [password, setPassword] = useState('');
     const [
         createUserWithEmailAndPassword,
@@ -14,6 +15,7 @@ const Signup = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+    let from = location.state?.from?.pathname || "/";
 
     const navigate = useNavigate();
     const handleLogin = () => {
@@ -23,6 +25,20 @@ const Signup = () => {
     const navigateToHome = () => {
         navigate('/');
     }
+    if (user) {
+       navigate(from,{replace:true})
+      }
+    if (error) {
+        return (
+          <div>
+            <p>Error: {error.message}</p>
+          </div>
+        );
+      }
+      if (loading) {
+        return <p>Loading...</p>;
+      }
+     
     return (
         <div>
             <div className='flex justify-center'>

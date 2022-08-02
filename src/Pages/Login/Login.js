@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Login = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      let from = location.state?.from?.pathname || "/";
 
-    const navigate = useNavigate();
     const handleSignup = () => {
         navigate('/signup');
 
@@ -21,6 +23,9 @@ const Login = () => {
     const navigateToHome = () => {
         navigate('/');
     }
+    if (user) {
+      navigate(from, { replace: true });
+     }
     if (error) {
         return (
           <div>
@@ -31,13 +36,7 @@ const Login = () => {
       if (loading) {
         return <p>Loading...</p>;
       }
-      if (user) {
-        return (
-          <div>
-            <p>Signed In User: {user.email}</p>
-          </div>
-        );
-      }
+
     return (
         <div>
              <div className='flex justify-center'>
