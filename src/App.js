@@ -14,24 +14,27 @@ import Panjabi from './Pages/Home/Products/Panjabi';
 import Borka from './Pages/Home/Products/Borka';
 import QuranAndHadith from './Pages/Home/Products/QuranAndHadith';
 import Products from './Pages/Home/Products/Products';
+import Login from './Pages/Login/Login';
+import Signup from './Pages/Login/Signup';
 
 function App() {
   return (
-    <div>
-      <Header></Header>
-      <hr />
-     <Routes>
-      <Route path="/" element={<Home></Home>}>
-      <Route index element={<Products></Products>}></Route>
-      <Route path='QuranandHadith' element={<QuranAndHadith></QuranAndHadith>}></Route>
-      <Route path='panjabi' element={<Panjabi></Panjabi>}></Route>
-      <Route path='borka' element={<Borka></Borka>}></Route>
-      <Route path='tupi' element={<Tupi></Tupi>}></Route>
-      <Route path='jainamaj' element={<Jainamaj></Jainamaj>}></Route>
-      <Route path='tasbih' element={<Tasbih></Tasbih>}></Route>
-      <Route path='attar' element={<Attar></Attar>}></Route>
-      </Route>
-    </Routes>
+    <div>     
+        <hr />
+        <Routes>
+          <Route path="/" element={<Home></Home>}>
+            <Route index element={<Products></Products>}></Route>
+            <Route path='QuranandHadith' element={<QuranAndHadith></QuranAndHadith>}></Route>
+            <Route path='panjabi' element={<Panjabi></Panjabi>}></Route>
+            <Route path='borka' element={<Borka></Borka>}></Route>
+            <Route path='tupi' element={<Tupi></Tupi>}></Route>
+            <Route path='jainamaj' element={<Jainamaj></Jainamaj>}></Route>
+            <Route path='tasbih' element={<Tasbih></Tasbih>}></Route>
+            <Route path='attar' element={<Attar></Attar>}></Route>
+          </Route>
+          <Route path='/login' element={<Login></Login>}></Route>
+          <Route path='/signup' element={<Signup></Signup>}></Route>
+        </Routes>
     </div>
   );
 }

@@ -14,7 +14,7 @@ const Tasbih1 = ({tasbih}) => {
           <h3 className='text-xs'>{size}</h3>
           <h4 className='text-[orange]'>{rating}</h4>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Add to cart</button>
+            <button class="btn button btn-primary">Add to cart</button>
           </div>
         </div>
       </div>

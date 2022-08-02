@@ -7,6 +7,9 @@ const Header = () => {
         navigate('/');
 
     }
+    const handleLogin =()=>{
+      navigate('/login');
+    }
     const handleSearch = event =>{
       event.preventDefault();
       const value = document.getElementById('default-search').value;
@@ -34,7 +37,7 @@ const Header = () => {
               <li><a>Item 3</a></li>
             </ul>
           </div>
-          <img onClick={navigateToHome} className='w-56 ml-5' src="https://i.ibb.co/GT1RTkC/amalan-sunnah-removebg-preview.png" alt="" />
+          <img onClick={navigateToHome} className='w-48 ml-5' src="https://i.ibb.co/GT1RTkC/amalan-sunnah-removebg-preview.png" alt="" />
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
@@ -47,13 +50,13 @@ const Header = () => {
         </div>
         <input  type="search" id="default-search" placeholder='What are you looking for.....' class="block  p-4 pl-10 w-96 text-sm text-gray-900 bg-gray-50 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:border-primary dark:placeholder-gray-400  dark:focus:ring-blue-500 " required=""/>
         
-        <button type="submit" class="text-white absolute right-2.5  bottom-2.5  hover:bg-primary focus:ring-4 focus:outline-none font-medium rounded-xl  text-sm px-4 py-2 dark:bg-primary hover:bg-green-800 dark:focus:ring-green-700">Search</button>
+        <button type="submit" class="text-white button absolute right-2.5  bottom-2.5  hover:bg-primary focus:ring-4 focus:outline-none font-medium rounded-xl  text-sm px-4 py-2 dark:bg-primary hover:bg-green-800 dark:focus:ring-green-700">Search</button>
     </div>
 </form>         
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn">Logout</a>
+          <a onClick={handleLogin} class="button p-1 px-3 text-white font-semibold rounded">Login</a>
         </div>
       </div>
     );

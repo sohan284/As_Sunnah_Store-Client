@@ -8,13 +8,45 @@
   padding: 1%;
   border-radius: 1%;
 }
-.banner:hover{
-  
-}
 .productCard{
   margin: 2%;
   box-shadow: 1px 0px 5px 1px rgb(133, 133, 133);
 }
+.formInput{
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding: 3px; 
+}
+.formInput:focus{
+  border: 3px solid rgb(6, 216, 6);
+
+}
+.button{
+  background: linear-gradient(30deg, #aad160 , #008000 100%);
+  border: 1px solid black;
+  color: white;
+}
+
+.button:hover{
+  background: linear-gradient(30deg, #aad160 , #008000 80%);
+  color: #f7ffb1;
+}
+.cBtn{
+  background: linear-gradient( #ffffff , #dfdfdf 100%);
+  border: 1px solid rgb(139, 139, 139);
+  
+}
+.cBtn:hover{
+  background: #dadada83;
+  border: 1px solid rgb(110, 110, 110);
+  
+}
+.lgin:hover{
+  border-bottom:2px solid #008000;
+  color: #008000;
+  font-weight: 700;
+}
+
 .productCard:hover{
   transform: scale(1.01);
   transition: transform .3s;
