@@ -8,16 +8,16 @@ const Home = () => {
         <div>
             <Header></Header>
             <div className='mt-5'>
-            <div class="drawer  drawer-mobile">
-                <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content flex flex-col">
+            <div className="drawer  drawer-mobile">
+                <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content flex flex-col">
                     <Outlet></Outlet>
 
 
                 </div>
-                <div class="drawer-side">
-                    <label for="dashboard-sidebar" class="drawer-overlay"></label>
-                    <ul class="menu p-4  text-white overflow-y-auto w-80 text-base-content">
+                <div className="drawer-side">
+                    <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
+                    <ul className="menu p-4  text-white overflow-y-auto w-80 text-base-content">
 
                         <li className='text-primary bg-[#aad160] m-1 rounded-2xl uppercase font-extrabold'><Link to="QuranandHadith" >
                             <div className='flex w-full justify-between items-center'>
