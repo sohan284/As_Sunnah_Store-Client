@@ -16,6 +16,7 @@ import QuranAndHadith from './Pages/Home/Products/QuranAndHadith';
 import Products from './Pages/Home/Products/Products';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/Login/Signup';
+import SearchContainer from './Pages/Home/SearchContainer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path='jainamaj' element={<Jainamaj></Jainamaj>}></Route>
             <Route path='tasbih' element={<Tasbih></Tasbih>}></Route>
             <Route path='attar' element={<Attar></Attar>}></Route>
+            <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
           </Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Signup></Signup>}></Route>

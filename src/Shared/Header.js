@@ -1,5 +1,5 @@
 import { signOut } from 'firebase/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from "react-router-dom";
 import auth from './../firebase.init';
@@ -7,12 +7,10 @@ import auth from './../firebase.init';
 const Header = () => {
     const navigate = useNavigate();
     const [user] = useAuthState(auth);
+    const [search,setSearch] = useState('');
     const navigateToHome = () =>{
         navigate('/');
 
-    }
-    const handleLogin =()=>{
-      navigate('/login');
     }
     const logout = () =>{
       signOut(auth);
@@ -20,7 +18,12 @@ const Header = () => {
     const handleSearch = event =>{
       event.preventDefault();
       const value = document.getElementById('default-search').value;
-      console.log(value);
+      setSearch(value);
+      if(value != 0){
+        
+        navigate('/search')
+      }
+      
     }
     return (
         <div className="navbar bg-base-100">
@@ -49,7 +52,7 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li><a>Home</a></li>         
-<form onSubmit={handleSearch}>   
+{/* <form>   
     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
     <div className="relative">
         <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -57,14 +60,14 @@ const Header = () => {
         </div>
         <input  type="search" id="default-search" placeholder='What are you looking for.....' className="block  p-4 pl-10 w-96 text-sm text-gray-900 bg-gray-50 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:border-primary dark:placeholder-gray-400  dark:focus:ring-blue-500 " required=""/>
         
-        <button type="submit" className="text-white button absolute right-2.5  bottom-2.5  hover:bg-primary focus:ring-4 focus:outline-none font-medium rounded-xl  text-sm px-4 py-2 dark:bg-primary hover:bg-green-800 dark:focus:ring-green-700">Search</button>
+        <button onClick={handleSearch} className="text-white button absolute right-2.5  bottom-2.5  hover:bg-primary focus:ring-4 focus:outline-none font-medium rounded-xl  text-sm px-4 py-2 dark:bg-primary hover:bg-green-800 dark:focus:ring-green-700">Search</button>
     </div>
-</form>         
+</form>          */}
           </ul>
         </div>
         <div className="navbar-end">
           { user &&
-           <button className='font-bold text-secondary'><Link to={'/dashboard'}> <img className='w-10 mx-3 rounded-full' src={user.photoURL} alt="" /> </Link></button>}
+           <button className='font-bold text-secondary'><Link to={'/'}> <img className='w-10 mx-3 rounded-full' src={user.photoURL} alt="" /> </Link></button>}
            
            {user?
            <button onClick={logout}><img className='w-10  hover:bg-black hover:rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" /></button> : <Link to={'/login'}>
