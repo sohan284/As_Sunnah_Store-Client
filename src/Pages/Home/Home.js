@@ -8,7 +8,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className=' mx-auto container'>
             <Header></Header>
             <div className='mt-5'>
                 <div className="drawer  drawer-mobile">

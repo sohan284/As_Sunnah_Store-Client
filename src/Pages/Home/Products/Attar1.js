@@ -14,6 +14,7 @@ const Attar1 = ({attar}) => {
           <h3 className='text-xs'>{size}</h3>
           <h4 className='text-[orange]'>{rating}</h4>
           <div className="card-actions justify-end">
+          <button className="btn buyButton btn-primary button">Buy now</button>
             <button className="btn button btn-primary">Add to cart</button>
           </div>
         </div>
