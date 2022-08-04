@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import SunnahLogo from './../../Shared/SunnahLogo';
 
 const Signup = () => {
     const [signInWithGoogle] = useSignInWithGoogle(auth);
@@ -22,9 +23,6 @@ const Signup = () => {
         navigate('/login');
 
     }
-    const navigateToHome = () => {
-        navigate('/');
-    }
     if (user) {
        navigate(from,{replace:true})
       }
@@ -41,9 +39,7 @@ const Signup = () => {
      
     return (
         <div>
-            <div className='flex justify-center'>
-                <img onClick={navigateToHome} className='w-48 ml-5' src="https://i.ibb.co/GT1RTkC/amalan-sunnah-removebg-preview.png" alt="" />
-            </div>
+           <SunnahLogo></SunnahLogo>
             <div className='flex justify-center '>
                 <div>
                     <div className='border rounded p-8 mt-5 shadow-lg'>

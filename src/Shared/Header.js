@@ -35,7 +35,7 @@ const Header = () => {
             <li><a>Item 3</a></li>
           </ul>
         </div>
-        <div className="navbar-end absolute left-0 top-[98px]">
+        <div className="navbar-end absolute  top-[93px]">
         <label tabIndex="1" for="dashboard-sidebar" className="lg:hidden">
             <img className='w-24 hover:w-[100px]' src="https://i.ibb.co/NWnWHg1/shop-removebg-preview.png" alt="" />
         </label>

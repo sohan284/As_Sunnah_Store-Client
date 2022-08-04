@@ -17,6 +17,7 @@ import Products from './Pages/Home/Products/Products';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/Login/Signup';
 import SearchContainer from './Pages/Home/SearchContainer';
+import BuyNow from './Pages/BuyNow/BuyNow';
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
             <Route path='attar' element={<Attar></Attar>}></Route>
             <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
           </Route>
+          
+          <Route path='/buynow/:productId' element={<BuyNow></BuyNow>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Signup></Signup>}></Route>
         </Routes>

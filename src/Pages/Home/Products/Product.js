@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 
 const Product = ({search,product }) => {
   const navigate = useNavigate();
-  const { name, price, img, size, discount, p_id, rating } = product;
-  const handleBuyNow = () =>{
-    navigate(`/buynow`)
+  const { name, price, img, size, discount, p_id,_id,rating } = product;
+ 
+  const handleBuyNow = (id) =>{
+    navigate(`/buynow/${id}`)
 
   }
   if(name.toLowerCase().includes(search)){
@@ -19,9 +20,8 @@ const Product = ({search,product }) => {
             <h3 className='text-xs'>{size}</h3>
             <h4 className='text-[orange]'>{rating}</h4>
             <div className="card-actions justify-end">
-            <button onClick={handleBuyNow} className="btn buyButton btn-primary button">Buy now</button>
+            <button onClick={()=>handleBuyNow(_id)} className="btn buyButton btn-primary button">Buy now</button>
               <button className="btn button btn-primary button">Add to cart</button>
-              
             </div>
           </div>
         </div>
