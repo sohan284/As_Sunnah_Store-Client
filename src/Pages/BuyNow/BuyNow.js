@@ -45,7 +45,7 @@ const BuyNow = () => {
                     <h2 className='text-secondary font-bold text-4xl'>About : </h2>
                     <hr className='mt-5'/>
                     <ul className='border-4'>
-                        <li className='bg-[#e7e9e0] p-2 flex justify-between'> <span className='text-primary font-bold '> Type : </span> <span className='font-semibold'>{product.disc?.product_type}</span> </li>
+                        <li className='bg-[#e7e9e0] p-2 flex justify-between'> <span className='text-primary font-bold '> Type : </span> <span className='font-semibold'>{product.disc?.product_type} {product.type}</span> </li>
 
                         <li className='p-2 flex justify-between'> <span className='text-primary font-bold '>Product_Code : </span> <span className='font-semibold'>{product.p_id}</span> </li>
                         <li className='bg-[#e7e9e0] p-2 flex justify-between'> <span className='text-primary font-bold '> Brand : </span> <span className='font-semibold'>{product.disc?.brand_name}</span> </li>
