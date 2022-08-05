@@ -56,8 +56,6 @@ const BuyNow = () => {
 
                         <li className='p-2 flex justify-between'> <span className='text-primary font-bold '> Material : </span> <span className='font-semibold'>{product.disc?.product_metarial}</span> </li>
 
-                        
-
                         <li className='bg-[#e7e9e0] p-2 flex justify-between'> <span className='text-primary font-bold '> Color : </span> <span className='font-semibold'>{product.disc?.color}</span> </li>
 
                         <li className='p-2 flex justify-between'> <span className='text-primary font-bold '>Size : </span> <span className='font-semibold'>{product.disc?.size} {product.size}</span> </li>

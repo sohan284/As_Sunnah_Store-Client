@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import SunnahLogo from './../../Shared/SunnahLogo';
+import { BounceLoader } from 'react-spinners';
 
 const Signup = () => {
     const [signInWithGoogle] = useSignInWithGoogle(auth);
@@ -34,9 +35,13 @@ const Signup = () => {
         );
       }
       if (loading) {
-        return <p>Loading...</p>;
+     return <div className='flex justify-center h-screen items-center'>
+        <BounceLoader
+          color="#6fc205"
+          size={100}
+        />
+      </div>
       }
-     
     return (
         <div>
            <SunnahLogo></SunnahLogo>
@@ -44,7 +49,7 @@ const Signup = () => {
                 <div>
                     <div className='border rounded p-8 mt-5 shadow-lg'>
                         <div>
-                            <h1 className='text-3xl  font-bold mb-7'>Create Account</h1>
+                            <h1 className='text-3xl  font-bold mb-5'>Create Account</h1>
 
                             <h6 className='text-sm font-semibold '>Your Name</h6>
                             <input className='w-72 formInput' 
@@ -72,7 +77,7 @@ const Signup = () => {
                             <br />
                             <button onClick={()=>createUserWithEmailAndPassword(email,password)} className='w-72 button text-white font-bold rounded p-1 mt-5'>Signup</button>
                         </div>
-                        <div className=" my-8" ><small>Already have an account? <span><a className='font-semibold text-[blue] lgin' onClick={handleLogin} href="">Log-In</a></span></small> </div>
+                        <div className=" mt-5" ><small>Already have an account? <span><a className='font-semibold text-[blue] lgin' onClick={handleLogin} href="">Log-In</a></span></small> </div>
                     </div>
                     <div className="divider my-3" ><small>OR</small></div>
                     <button onClick={() => signInWithGoogle()} className=' shadow-lg w-full rounded p-1 font-semibold cBtn'>

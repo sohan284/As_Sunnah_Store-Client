@@ -18,28 +18,33 @@ import Login from './Pages/Login/Login';
 import Signup from './Pages/Login/Signup';
 import SearchContainer from './Pages/Home/SearchContainer';
 import BuyNow from './Pages/BuyNow/BuyNow';
+import RequireAuth from './Pages/Login/RequireAuth';
 
 function App() {
   return (
-    <div>     
-        <hr />
-        <Routes>
-          <Route path="/" element={<Home></Home>}>
-            <Route index element={<Products></Products>}></Route>
-            <Route path='QuranandHadith' element={<QuranAndHadith></QuranAndHadith>}></Route>
-            <Route path='panjabi' element={<Panjabi></Panjabi>}></Route>
-            <Route path='borka' element={<Borka></Borka>}></Route>
-            <Route path='tupi' element={<Tupi></Tupi>}></Route>
-            <Route path='jainamaj' element={<Jainamaj></Jainamaj>}></Route>
-            <Route path='tasbih' element={<Tasbih></Tasbih>}></Route>
-            <Route path='attar' element={<Attar></Attar>}></Route>
-            <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
-          </Route>
-          
-          <Route path='/buynow/:productId' element={<BuyNow></BuyNow>}></Route>
-          <Route path='/login' element={<Login></Login>}></Route>
-          <Route path='/signup' element={<Signup></Signup>}></Route>
-        </Routes>
+    <div>
+      <hr />
+      <Routes>
+        <Route path="/" element={<Home></Home>}>
+          <Route index element={<Products></Products>}></Route>
+          <Route path='QuranandHadith' element={<QuranAndHadith></QuranAndHadith>}></Route>
+          <Route path='panjabi' element={<Panjabi></Panjabi>}></Route>
+          <Route path='borka' element={<Borka></Borka>}></Route>
+          <Route path='tupi' element={<Tupi></Tupi>}></Route>
+          <Route path='jainamaj' element={<Jainamaj></Jainamaj>}></Route>
+          <Route path='tasbih' element={<Tasbih></Tasbih>}></Route>
+          <Route path='attar' element={<Attar></Attar>}></Route>
+          <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
+        </Route>
+
+        <Route path='/buynow/:productId' element={
+          <RequireAuth>
+            <BuyNow></BuyNow>
+          </RequireAuth>
+        }></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
+      </Routes>
     </div>
   );
 }

@@ -49,11 +49,12 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
+      <img className='w-12 m-5 hover:w-[55px]' src="https://i.ibb.co/mCPjZ7m/20460508-removebg-preview.png" alt="" />
         {user &&
           <div className='font-bold text-secondary'><Link to={'/dashboard'}>{user.displayName}</Link></div>}
 
         {user ?
-          <button onClick={logout}><img className='w-10  hover:bg-black hover:rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" /></button> : <Link to={'/login'}>
+          <button onClick={logout}><img className='w-10 ml-2 hover:bg-black hover:rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" /></button> : <Link to={'/login'}>
             <button><img className='w-10  hover:bg-black hover:rounded-full ' src="https://i.ibb.co/nwCs3xs/login.png" alt="" /></button></Link>}
       </div>
     
