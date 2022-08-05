@@ -51,7 +51,7 @@ const Products = () => {
                 </div>
             </div>
 
-            <div className='grid lg:grid-cols-2'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-2'>
 
                 {
                     products.map(product => <Product key={product.id} search={search} product={product}></Product>)

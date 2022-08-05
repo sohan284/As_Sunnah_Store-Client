@@ -8,7 +8,7 @@ const Attar = () => {
         <div>
             <h1 className='text-primary text-5xl font-bold ml-10'>Attar</h1>
             {
-products.map(attar=><Attar1 attar={attar}></Attar1>)
+                products.map(attar => <Attar1 attar={attar}></Attar1>)
             }
         </div>
     )
