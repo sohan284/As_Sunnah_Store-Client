@@ -1,5 +1,4 @@
 import { signOut } from 'firebase/auth';
-import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from "react-router-dom";
 import auth from './../firebase.init';
@@ -21,18 +20,14 @@ const Header = () => {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
           <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a>Item 1</a></li>
+            
             <li tabIndex="0">
-              <a className="justify-between">
-                Parent
-                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-              </a>
+             
               <ul className="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+               
               </ul>
             </li>
-            <li><a>Item 3</a></li>
+            
           </ul>
         </div>
         <div className="navbar-end absolute  top-[93px]">
@@ -40,18 +35,20 @@ const Header = () => {
             <img className='w-24 hover:w-[100px]' src="https://i.ibb.co/NWnWHg1/shop-removebg-preview.png" alt="" />
         </label>
 </div>
-        <img onClick={navigateToHome} className='w-48 ml-5' src="https://i.ibb.co/GT1RTkC/amalan-sunnah-removebg-preview.png" alt="" />
+        <img onClick={navigateToHome} className='w-48' src="https://i.ibb.co/GT1RTkC/amalan-sunnah-removebg-preview.png" alt="" />
        
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <li><a>Home</a></li>
+        
         </ul>
       </div>
       <div className="navbar-end">
-      <img className='w-12 m-5 hover:w-[55px]' src="https://i.ibb.co/mCPjZ7m/20460508-removebg-preview.png" alt="" />
         {user &&
-          <div className='font-bold text-secondary'><Link to={'/dashboard'}>{user.displayName}</Link></div>}
+          <div className='font-bold '><Link to={'/cart'}> <img className='w-12 m-2 hover:w-[50px]' src="https://i.ibb.co/mCPjZ7m/20460508-removebg-preview.png" alt="" /> </Link></div>}
+      
+        {user &&
+          <div className='font-bold text-secondary  hover:border border-black  rounded-full '><Link to={'/userprofile'}> <img className='rounded-full w-10 ' src={user.photoURL} alt="" /> </Link></div>}
 
         {user ?
           <button onClick={logout}><img className='w-10 ml-2 hover:bg-black hover:rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" /></button> : <Link to={'/login'}>

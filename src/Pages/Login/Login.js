@@ -10,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
+  let errorMessage;
   const [
     signInWithEmailAndPassword,
     user,
@@ -27,11 +28,7 @@ const Login = () => {
     
   }
   if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
+    errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Error: {error?.message}</p>
   }
   if (loading) {
     return <div className='flex justify-center h-screen items-center'>
@@ -70,6 +67,7 @@ const Login = () => {
               <button onClick={() => signInWithEmailAndPassword(email, password)} className='w-72 button text-white font-bold rounded p-1 mt-5'> Login</button>
 
             </div>
+            {errorMessage}
           </div>
           <div className="divider my-8" ><small>New to Sunnah Store ?</small></div>
           <button onClick={handleSignup} className=' shadow-lg w-full p-1  cBtn rounded'>Create Your account</button>

@@ -11,6 +11,7 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const location = useLocation();
     const [password, setPassword] = useState('');
+    let errorMessage;
     const [
         createUserWithEmailAndPassword,
         user,
@@ -27,12 +28,8 @@ const Signup = () => {
     if (user) {
        navigate(from,{replace:true})
       }
-    if (error) {
-        return (
-          <div>
-            <p>Error: {error.message}</p>
-          </div>
-        );
+      if (error) {
+        errorMessage = <p className='text-[red] font-semibold my-3 text-sm'>Error: {error?.message}</p>
       }
       if (loading) {
      return <div className='flex justify-center h-screen items-center'>
@@ -76,9 +73,12 @@ const Signup = () => {
                             <input className='w-72 formInput' type="password" placeholder='re-password' />
                             <br />
                             <button onClick={()=>createUserWithEmailAndPassword(email,password)} className='w-72 button text-white font-bold rounded p-1 mt-5'>Signup</button>
+                            {errorMessage}
                         </div>
-                        <div className=" mt-5" ><small>Already have an account? <span><a className='font-semibold text-[blue] lgin' onClick={handleLogin} href="">Log-In</a></span></small> </div>
+                        <div className=" mt-5" ><small>Already have an account? <span onClick={handleLogin} className='font-semibold text-[blue] lgin' > Log-In</span></small> </div>
+                       
                     </div>
+                    
                     <div className="divider my-3" ><small>OR</small></div>
                     <button onClick={() => signInWithGoogle()} className=' shadow-lg w-full rounded p-1 font-semibold cBtn'>
                         <div className='flex justify-center items-center'>

@@ -1,10 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
 import {
   Routes,
   Route,
 } from "react-router-dom";
-import Header from './Shared/Header';
 import Home from './Pages/Home/Home';
 import Jainamaj from './Pages/Home/Products/Jainamaj';
 import Tupi from './Pages/Home/Products/Tupi';
@@ -19,6 +18,8 @@ import Signup from './Pages/Login/Signup';
 import SearchContainer from './Pages/Home/SearchContainer';
 import BuyNow from './Pages/BuyNow/BuyNow';
 import RequireAuth from './Pages/Login/RequireAuth';
+import Cart from './Pages/Cart/Cart';
+import UserProfile from './Pages/UserProfile/UserProfile';
 
 function App() {
   return (
@@ -42,6 +43,15 @@ function App() {
             <BuyNow></BuyNow>
           </RequireAuth>
         }></Route>
+
+        <Route path='/cart' element={
+          <RequireAuth>
+            <Cart></Cart>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='userprofile' element={<UserProfile></UserProfile>}></Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
       </Routes>

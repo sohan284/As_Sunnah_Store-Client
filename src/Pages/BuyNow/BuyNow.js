@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Footer from '../../Shared/Footer';
 import SunnahLogo from '../../Shared/SunnahLogo';
 
 const BuyNow = () => {
@@ -12,7 +13,7 @@ const BuyNow = () => {
             .then(res => res.json())
             .then(data => setProduct(data))
 
-    }, [])
+    },)
     const percentage = parseInt(product.discount);
     const discountPrice = (percentage / 100) * product.price;
     const previousPrice = parseInt(product.price - discountPrice);
@@ -65,6 +66,7 @@ const BuyNow = () => {
                 </div>
 
             </div>
+            <Footer></Footer>
 
         </div>
     );
