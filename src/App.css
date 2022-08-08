@@ -4,9 +4,7 @@
 .banner{
   background-color: #ebebeb;
   box-shadow: 0px 0px 3px 3px rgb(8, 100, 0);
-  margin: 1%;
-  padding: 1%;
-  border-radius: 1%;
+  border-radius: 10px;
 }
 .productCard{
   margin: 2%;

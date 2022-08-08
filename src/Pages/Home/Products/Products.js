@@ -4,7 +4,7 @@ import Product from './Product';
 
 const Products = () => {
     const [products, setProduct] = useProducts([]);
-    const [search,setSearch] = useState('');
+    const [search, setSearch] = useState('');
     const handleSearch = event => {
         event.preventDefault();
         const value = document.getElementById('default-search').value;
@@ -13,7 +13,7 @@ const Products = () => {
     }
     return (
         <div>
-                <form className='flex justify-center absolute lg:top-24 top-[120px] left-[20%] lg:left-[40%]'>
+            <form className='flex justify-center absolute lg:top-24 top-[120px] left-[20%] lg:left-[40%]'>
                 <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
                 <div className="relative">
                     <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -24,32 +24,38 @@ const Products = () => {
                     <button onClick={handleSearch} className="text-white button absolute right-1 top-1  bottom-1 lg:bottom-1.5  hover:bg-primary focus:ring-4 focus:outline-none font-medium rounded-full  text-sm lg:px-5 px-3  dark:bg-primary hover:bg-green-800 dark:focus:ring-green-700">Search</button>
                 </div>
             </form>
-            <div className='flex flex-col lg:flex-row banner justify-evenly'>
-                <div>
-                    <div className="h-96 carousel w-full  mx-auto carousel-vertical  rounded-box">
-                        <div>
-                            <div className="carousel-item h-54 w-full">
-                                <img src="https://i.ibb.co/sJ7RSfq/Visit-www-reallygreatsite-com-1.png" />
+        
+                    <div class="carousel banner w-full">
+                        <div id="slide1" class="carousel-item relative w-full">
+                            <img src=" https://i.ibb.co/7W6K8kB/Visit-www-reallygreatsite-com.jpg" class="w-full" />
+                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                <a href="#slide4" class="btn btn-circle">❮</a>
+                                <a href="#slide2" class="btn btn-circle">❯</a>
                             </div>
-                            <div className="carousel-item mt-5 h-54 w-full">
-                                <img src="https://i.ibb.co/9ZPgmvj/Visit-www-reallygreatsite-com-3.png" />
+                        </div>
+                        <div id="slide2" class="carousel-item relative w-full">
+                            <img src="https://i.ibb.co/9ZPgmvj/Visit-www-reallygreatsite-com-3.png" class="w-full" />
+                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                <a href="#slide1" class="btn btn-circle">❮</a>
+                                <a href="#slide3" class="btn btn-circle">❯</a>
+                            </div>
+                        </div>
+                        <div id="slide3" class="carousel-item relative w-full">
+                            <img src="https://i.ibb.co/DM3M8Ng/Visit-www-reallygreatsite-com-4.png" class="w-full" />
+                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                <a href="#slide2" class="btn btn-circle">❮</a>
+                                <a href="#slide4" class="btn btn-circle">❯</a>
+                            </div>
+                        </div>
+                        <div id="slide4" class="carousel-item relative w-full">
+                            <img src="https://i.ibb.co/sJ7RSfq/Visit-www-reallygreatsite-com-1.png" class="w-full" />
+                            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                <a href="#slide3" class="btn btn-circle">❮</a>
+                                <a href="#slide1" class="btn btn-circle">❯</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div className="h-96 carousel w-full  mx-auto carousel-vertical  rounded-box">
-                        <div>
-                            <div className="carousel-item  h-54 w-full">
-                                <img src="https://i.ibb.co/DM3M8Ng/Visit-www-reallygreatsite-com-4.png" />
-                            </div>
-                            <div className="carousel-item mt-5 h-54 w-full">
-                                <img src="https://i.ibb.co/7W6K8kB/Visit-www-reallygreatsite-com.jpg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <div className='grid lg:grid-cols-2 sm:grid-cols-2'>
 
