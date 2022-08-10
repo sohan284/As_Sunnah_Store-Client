@@ -4,7 +4,7 @@
     "rating": "★★★★✬",
     "p_id": 11,
     "name": "Leather Cover Cheap Printing Quran Book",
-    "price": 377,
+    "quantity":999 ,"price": 377,
     "disc": {
       "size": "148x210mm or customized",
       "shape": "Vertical",
@@ -28,7 +28,7 @@
     "rating": "★★★★☆",
     "p_id": 11,
     "name": "English Language Quran Muslim Islam Holy Book",
-    "price": 473,
+    "quantity":999 ,"price": 473,
     "disc": {
       "size": "4 sizes",
       "shape": "Vertical",
@@ -52,7 +52,7 @@
     "rating": "★★★★☆",
     "p_id": 11,
     "name": "Red velvet hot textile Arabic Muslim Holy Quran",
-    "price": 493,
+    "quantity":999 ,"price": 493,
     "disc": {
       "size": "small size",
       "shape": "Vertical",
@@ -76,7 +76,7 @@
     "rating": "★★★★☆",
     "p_id": 11,
     "name": "Religious Holy Book Whole Kuran Small book",
-    "price": 513,
+    "quantity":999 ,"price": 513,
     "disc": {
       "size": "4 sizes",
       "shape": "Vertical",
@@ -101,7 +101,7 @@
     "rating": "★★★★✬",
     "p_id": 11,
     "name": "Arabic Wedding Gift Maroon Quran ",
-    "price": 723,
+    "quantity":999 ,"price": 723,
     "disc": {
       "size": "4 sizes",
       "shape": "Vertical",
@@ -126,7 +126,7 @@
     "rating": "★★★★✬",
     "p_id": 11,
     "name": "Mini Kuran Book Gold Auto Hanger",
-    "price": 323,
+    "quantity":999 ,"price": 323,
     "disc": {
       "size": "mini size quran,4/5 cm. ",
       "shape": "Vertical",
@@ -151,7 +151,7 @@
     "rating": "★★★★★",
     "p_id": 11,
     "name": "Leather faux mini Brown Mini Brown Small Quran",
-    "price": 443,
+    "quantity":999 ,"price": 443,
     "disc": {
       "size": "4 sizes ",
       "shape": "Vertical",
@@ -176,7 +176,7 @@
     "rating": "★★★★★",
     "p_id": 11,
     "name": "Black velvet  Premium Quality  Mini Size Quran Book",
-    "price": 493,
+    "quantity":999 ,"price": 493,
     "disc": {
       "size": "4 sizes ",
       "shape": "Vertical",
@@ -201,7 +201,7 @@
     "rating": "★★★★✬",
     "p_id": 11,
     "name": "German Language Quran Muslim Translation ",
-    "price": 621,
+    "quantity":999 ,"price": 621,
     "disc": {
       "size": "4 sizes ",
       "shape": "Vertical",
@@ -226,7 +226,7 @@
     "rating": "★★★★★",
     "p_id": 11,
     "name": "Faux leather mini islam praying Premium Quality Arabic Muslim Holy Quran",
-    "price": 424,
+    "quantity":999 ,"price": 424,
     "disc": {
       "size": "small size",
       "shape": "Vertical",
@@ -251,7 +251,7 @@
     "rating": "★★★★✬",
     "p_id": 11,
     "name": "Russian Kiril Alphabet Arabic Pray Book",
-    "price": 1220,
+    "quantity":999 ,"price": 1220,
     "disc": {
       "size": "small size",
       "shape": "Vertical",
@@ -276,7 +276,7 @@
     "rating": "★★★★✬",
     "p_id": 11,
     "name": "Hadith Shankalan",
-    "price": 220,
+    "quantity":999 ,"price": 220,
     "disc": {
       "size": "4 size",
       "shape": "Vertical",
@@ -301,7 +301,7 @@
     "rating": "★★★★✬",
     "p_id": 11,
     "name": "Muslim Sharif",
-    "price": 180,
+    "quantity":999 ,"price": 180,
     "disc": {
       "size": "4 size",
       "shape": "Vertical",
@@ -326,7 +326,7 @@
     "rating": "★★★★✬",
     "p_id": 11,
     "name": "Bukhari Sharif ,Arabic and Bangali translation (all pieces in 2 volumes)",
-    "price": 1800,
+    "quantity":999 ,"price": 1800,
     "disc": {
       "size": "4 size",
       "shape": "Vertical",
@@ -352,7 +352,7 @@
     "rating": "★★★★★",
     "p_id": 22,"type": "Cloth",
     "name": "Black Uomo Hommes Kaftan Musulman Kurta",
-    "price": 1368,
+    "quantity":999 ,"price": 1368,
     "size": "S,L,XL,XXL",
     "disc": {
       "material": "Polyester",
@@ -374,7 +374,7 @@
     "rating": "★★★★✬",
     "p_id": 22,"type": "Cloth",
     "name": "Saudi Arabic Abaya Dubai Long Robes Traditional Kaftan",
-    "price": 2188,
+    "quantity":999 ,"price": 2188,
     "size": "S,M,L,XL,XXL",
     "disc": {
       "material": "Polyester",
@@ -396,7 +396,7 @@
     "rating": "★★★★✬",
     "p_id": 22,"type": "Cloth",
     "name": "Jubba Thobe Arabic Islamic Clothing Men abaya",
-    "price": 4208,
+    "quantity":999 ,"price": 4208,
     "size": "S,M,L,XL,XXL",
     "disc": {
       "material": "Polyester",
@@ -418,7 +418,7 @@
     "rating": "★★★★★",
     "p_id": 22,"type": "Cloth",
     "name": "Turkey Islamic Clothing Male Casual Loose Red Stripe",
-    "price": 3208,
+    "quantity":999 ,"price": 3208,
     "size": "S,M,L,XL,XXL",
     "disc": {
       "material": "Polyester",
@@ -440,7 +440,7 @@
     "rating": "★★★★✬",
     "p_id": 22,"type": "Cloth",
     "name": "Teenagers Islamic Clothing Men Muslim Thobe Boy Saudi Arabia Abaya",
-    "price": 2100,
+    "quantity":999 ,"price": 2100,
     "size": "S,M,L,XL",
     "disc": {
       "material": "Polyester",
@@ -462,7 +462,7 @@
     "rating": "★★★★✬",
     "p_id": 22,"type": "Cloth",
     "name": "Kaftan Vintage Long Sleeve Men Thobe Robe Loose Dubai Saudi Arab Kaftan Men Clothing",
-    "price": 1940,
+    "quantity":999 ,"price": 1940,
     "size": "M,L,XL,XXL,XXXL",
     "disc": {
       "material": "Polyester",
@@ -484,7 +484,7 @@
     "rating": "★★★★★",
     "p_id": 22,"type": "Cloth",
     "name": "Muslim Fashion Long Sleeve Robe Casual Loose Soft Dress",
-    "price": 1990,
+    "quantity":999 ,"price": 1990,
     "size": "M,L,XL,XXL",
     "disc": {
       "material": "Polyester",
@@ -506,7 +506,7 @@
     "rating": "★★★★✬",
     "p_id": 22,"type": "Cloth",
     "name": "Caftan Loose Casual Hooded Striped Robe Jubba Thobe",
-    "price": 1593,
+    "quantity":999 ,"price": 1593,
     "size": "M,L,XL,XXL",
     "disc": {
       "material": "Polyester",
@@ -528,7 +528,7 @@
     "rating": "★★★★✬",
     "p_id": 22,"type": "Cloth",
     "name": "Qamis Man Embroidery Loose High Quality Islam Clothing",
-    "price": 1473,
+    "quantity":999 ,"price": 1473,
     "size": "M,L,XL,XXL",
     "disc": {
       "material": "Polyester",
@@ -550,7 +550,7 @@
     "rating": "★★★★✬",
     "p_id": 22,"type": "Cloth",
     "name": "Tops Islamic Clothing Set Arabic Casual Blouse Robe Gown",
-    "price": 1042,
+    "quantity":999 ,"price": 1042,
     "size": "S,M,L,XL,XXL",
     "disc": {
       "material": "Polyester",
@@ -572,7 +572,7 @@
     "rating": "★★★★★",
     "p_id": 33,"type": "Cloth",
     "name": "Borka Muslim Prayer Dress Dubai Khimar Abaya ",
-    "price": 1342,
+    "quantity":999 ,"price": 1342,
     "size": "Free Size",
     "disc": {
       "material": "Polyester",
@@ -594,7 +594,7 @@
     "rating": "★★★★✬",
     "p_id": 33,"type": "Cloth",
     "name": "Simple Abaya Designs Long Shirts Plus Size Dress For Women",
-    "price": 1422,
+    "quantity":999 ,"price": 1422,
     "size": "Free Size",
     "disc": {
       "material": "Polyester",
@@ -616,7 +616,7 @@
     "rating": "★★★★✬",
     "p_id": 33,"type": "Cloth",
     "name": "Kaftan burqa fashion design dubai prayer robe abaya",
-    "price": 1136,
+    "quantity":999 ,"price": 1136,
     "size": "50,56,58,60",
     "disc": {
       "material": "Polyester",
@@ -638,7 +638,7 @@
     "rating": "★★★★✬",
     "p_id": 33,"type": "Cloth",
     "name": "Stylish Dubai Plus Size Women Malaysia Abaya",
-    "price": 1096,
+    "quantity":999 ,"price": 1096,
     "size": "S,M,L,XL,XXL,XXXL",
     "disc": {
       "material": "Polyester",
@@ -660,7 +660,7 @@
     "rating": "★★★★★",
     "p_id": 33,"type": "Cloth",
     "name": "Casual Ruffled Cuffs Elastic Cuffs Retro Floral Long Dress",
-    "price": 996,
+    "quantity":999 ,"price": 996,
     "size": "S,M,L",
     "disc": {
       "material": "Polyester",
@@ -682,7 +682,7 @@
     "rating": "★★★★✬",
     "p_id": 33,"type": "Cloth",
     "name": " Sleeve Casual Pocket Robe Bandage blouse Plus Size",
-    "price": 1376,
+    "quantity":999 ,"price": 1376,
     "size": "S,M,L",
     "disc": {
       "material": "Polyester",
@@ -704,7 +704,7 @@
     "rating": "★★★★✬",
     "p_id": 33,"type": "Cloth",
     "name": "Quality Chiffon Hijab Muslim Shawl",
-    "price": 396,
+    "quantity":999 ,"price": 396,
     "size": "180*80cm",
     "disc": {
       "material": "Chiffon",
@@ -726,7 +726,7 @@
     "rating": "★★★★✬",
     "p_id": 33,"type": "Cloth",
     "name": "Cotton Hijab Dubai  Headscarf Prayer Shawls lace Scarfs",
-    "price": 376,
+    "quantity":999 ,"price": 376,
     "size": "180*80cm",
     "disc": {
       "material": "Chiffon",
@@ -748,7 +748,7 @@
     "rating": "★★★★★",
     "p_id": 33,"type": "Cloth",
     "name": "Cotton small Hijab  Shawls Embroidery lace Scarfs Party Outfits",
-    "price": 293,
+    "quantity":999 ,"price": 293,
     "size": "40X30X14 cm",
     "disc": {
       "material": "Chiffon",
@@ -770,7 +770,7 @@
     "rating": "★★★★✬",
     "p_id": 33,"type": "Cloth",
     "name": "Cotton Hijab Dubai African  Shawls Embroidery lace Scarfs ",
-    "price": 420,
+    "quantity":999 ,"price": 420,
     "size": "38X30X17 cm",
     "disc": {
       "material": "Chiffon",
@@ -793,7 +793,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Tupi Embroidery Cap Muslim Islam Mens",
-    "price": 122,
+    "quantity":999 ,"price": 122,
     "size": "20X20X3 cm",
     "disc": {
       "material": "Polyester/cotton",
@@ -813,7 +813,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Muslim Kufi Hat Men Skull Tupi",
-    "price": 442,
+    "quantity":999 ,"price": 442,
     "size": "20X20X3 cm",
     "disc": {
       "material": "Polyester/cotton",
@@ -833,7 +833,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Hand knitted crochet muslim prayer hats",
-    "price": 76,
+    "quantity":999 ,"price": 76,
     "size": "Mixed size",
     "disc": {
       "material": "Polyester/cotton",
@@ -853,7 +853,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Kufi Muslim Prayer Kufi Hat",
-    "price": 220,
+    "quantity":999 ,"price": 220,
     "size": "20X20X3 cm",
     "disc": {
       "material": "Polyester/cotton",
@@ -873,7 +873,7 @@
     "rating": "★★★★★",
     "p_id": 44,"type": "Tupi",
     "name": "Muslim Turkish Kufi Embroidered Ivory Hat",
-    "price": 112,
+    "quantity":999 ,"price": 112,
     "size": "20X20X3 cm",
     "disc": {
       "material": "Polyester/cotton",
@@ -893,7 +893,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Islamic Arabian Turkey men muslim prayer  hat",
-    "price": 522,
+    "quantity":999 ,"price": 522,
     "size": "55,56,57,58,59",
     "disc": {
       "material": "Nylon",
@@ -913,7 +913,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Muslim Mens Embroidery Cap Muslim Wear Decoration",
-    "price": 322,
+    "quantity":999 ,"price": 322,
     "size": "20X20X3 cm",
     "disc": {
       "material": "Polyester/cotton",
@@ -934,7 +934,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Australia wool felt red fez hat muslim hat",
-    "price": 1437,
+    "quantity":999 ,"price": 1437,
     "size": "55-63cm",
     "disc": {
       "material": "Wool",
@@ -954,7 +954,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Headware Islamic Cap Ramadan Eid Gift cap",
-    "price": 592,
+    "quantity":999 ,"price": 592,
     "size": "13X13X13 cm",
     "disc": {
       "material": "Polyester/cotton",
@@ -974,7 +974,7 @@
     "rating": "★★★★★",
     "p_id": 44,"type": "Tupi",
     "name": "Embroidery Arabian Islam Jewish Caps",
-    "price": 162,
+    "quantity":999 ,"price": 162,
     "size": "56,57,58",
     "disc": {
       "material": "Polyester/cotton",
@@ -994,7 +994,7 @@
     "rating": "★★★★✬",
     "p_id": 44,"type": "Tupi",
     "name": "Factory Traditional songkok hat for muslims",
-    "price": 270,
+    "quantity":999 ,"price": 270,
     "size": "56,57,58",
     "disc": {
       "material": "Polyester/cotton",
@@ -1009,13 +1009,12 @@
     "discount": "-50%",
     "img": "https://i.ibb.co/3F9VyHj/H651ece7c77b74b72a77cfaba4abd1e95c-jpg-960x960.webp"
   },
-
   {
     "id": 501,
     "rating": "★★★★★",
     "p_id": 55,"type": "Mats",
     "name": "Anti-silp Muslim prayer mat manufacturer ",
-    "price": 1068,
+    "quantity":999 ,"price": 1068,
     "size": "80*120cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1034,7 +1033,7 @@
     "rating": "★★★★✬",
     "p_id": 55,"type": "Mats",
     "name": "Embossed Prayer Mats",
-    "price": 1468,
+    "quantity":999 ,"price": 1468,
     "size": "70*110 cm/80*120 cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1053,7 +1052,7 @@
     "rating": "★★★★✬",
     "p_id": 55,"type": "Mats",
     "name": "Velvet ExquisiteTurkish Prayer Mat",
-    "price": 1176,
+    "quantity":999 ,"price": 1176,
     "size": "80*120 cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1072,7 +1071,7 @@
     "rating": "★★★★✬",
     "p_id": 55,"type": "Mats",
     "name": "Travel foldable customized design muslim prayer mat",
-    "price": 881,
+    "quantity":999 ,"price": 881,
     "size": "70*110 cm/80*120 cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1091,7 +1090,7 @@
     "rating": "★★★★★",
     "p_id": 55,"type": "Mats",
     "name": "Printing travel foldable customized design prayer mat",
-    "price": 884,
+    "quantity":999 ,"price": 884,
     "size": "70*110 cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1110,7 +1109,7 @@
     "rating": "★★★★✬",
     "p_id": 55,"type": "Mats",
     "name": " Islamic Prayer Mat Set Polyester Tassel",
-    "price": 984,
+    "quantity":999 ,"price": 984,
     "size": "70*110 cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1129,7 +1128,7 @@
     "rating": "★★★★✬",
     "p_id": 55,"type": "Mats",
     "name": "Jacquard Quilted Memory Foam Muslim Prayer Mats Rug",
-    "price": 944,
+    "quantity":999 ,"price": 944,
     "size": "80*120cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1148,7 +1147,7 @@
     "rating": "★★★★★",
     "p_id": 55,"type": "Mats",
     "name": "Modern New Design Customized Sejadah Travel Janamaz",
-    "price": 2844,
+    "quantity":999 ,"price": 2844,
     "size": "80*120cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1167,7 +1166,7 @@
     "rating": "★★★★✬",
     "p_id": 55,"type": "Mats",
     "name": "Muslim Padded Prayer Mats Comfortable Mat With Back Rest",
-    "price": 2740,
+    "quantity":999 ,"price": 2740,
     "size": "80*120cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1186,7 +1185,7 @@
     "rating": "★★★★✬",
     "p_id": 55,"type": "Mats",
     "name": "Kaaba mat high quality prayer mat design",
-    "price": 740,
+    "quantity":999 ,"price": 740,
     "size": "80*120cm",
     "disc": {
       "thickness": "10-15mm",
@@ -1206,7 +1205,7 @@
     "rating": "★★★★✬",
     "p_id": 66,"type": "Beads",
     "name": "Muslim Digital Smart Ring tasbih counter",
-    "price": 1089,
+    "quantity":999 ,"price": 1089,
     "size": "0.49 inch",
     "disc": {
       "bluetooth": "Bluetooth 5.1",
@@ -1225,7 +1224,7 @@
     "rating": "★★★★★",
     "p_id": 66,"type": "Beads",
     "name": "Tally Counter Electronic Beads Muslim Tasbih",
-    "price": 489,
+    "quantity":999 ,"price": 489,
     "size": " 2.5 cm",
     "disc": {
       "width": "5 cm",
@@ -1244,7 +1243,7 @@
     "rating": "★★★★✬",
     "p_id": 66,"type": "Beads",
     "name": "LED finger Tasbih Digital Tally Counter",
-    "price": 345,
+    "quantity":999 ,"price": 345,
     "size": "11*3.1*3.6cm",
     "disc": {
       "width": "5 cm",
@@ -1263,7 +1262,7 @@
     "rating": "★★★★✬",
     "p_id": 66,"type": "Beads",
     "name": "Gold thread tassel Islamic misbaha tasbih",
-    "price": 1118,
+    "quantity":999 ,"price": 1118,
     "size": "26X18X10 cm",
     "disc": {
       "tasbih_type": "33 beads",
@@ -1283,7 +1282,7 @@
     "rating": "★★★★★",
     "p_id": 66,"type": "Beads",
     "name": "Black stone tasbih prayer beads 99",
-    "price": 205,
+    "quantity":999 ,"price": 205,
     "size": "26X18X10 cm",
     "disc": {
       "tasbih_type": "99 beads",
@@ -1303,7 +1302,7 @@
     "rating": "★★★★✬",
     "p_id": 66,"type": "Beads",
     "name": "Kuka seeds islamic tasbeeh round 9mm 33 beads",
-    "price": 285,
+    "quantity":999 ,"price": 285,
     "size": "26X18X10 cm",
     "disc": {
       "tasbih_type": "33 beads",
@@ -1323,7 +1322,7 @@
     "rating": "★★★★✬",
     "p_id": 66,"type": "Beads",
     "name": "8MM beads Necklace Colorful Crystal glassTasbih",
-    "price": 189,
+    "quantity":999 ,"price": 189,
     "size": "26X18X10 cm",
     "disc": {
       "tasbih_type": "33 beads",
@@ -1343,7 +1342,7 @@
     "rating": "★★★★✬",
     "p_id": 66,"type": "Beads",
     "name": "Rosary muslim jewelry tasbeeh",
-    "price": 189,
+    "quantity":999 ,"price": 189,
     "size": "26X18X10 cm",
     "disc": {
       "tasbih_type": "33 beads",
@@ -1363,7 +1362,7 @@
     "rating": "★★★★★",
     "p_id": 66,"type": "Beads",
     "name": "Beautiful resin color islamic prayer beads 33pcs",
-    "price": 189,
+    "quantity":999 ,"price": 189,
     "size": "26X18X10 cm",
     "disc": {
       "tasbih_type": "33 beads",
@@ -1383,7 +1382,7 @@
     "rating": "★★★★✬",
     "p_id": 66,"type": "Beads",
     "name": "Hematite Stone arabic jewelry beads tasbih",
-    "price": 489,
+    "quantity":999 ,"price": 489,
     "size": "26X18X10 cm",
     "disc": {
       "tasbih_type": "33 beads",
@@ -1403,7 +1402,7 @@
     "rating": "★★★★✬",
     "p_id": 66,"type": "Beads",
     "name": "High quality thread tassel red agate stone tasbih",
-    "price": 663,
+    "quantity":999 ,"price": 663,
     "size": "26X18X10 cm",
     "disc": {
       "tasbih_type": "33 beads",
@@ -1423,7 +1422,7 @@
     "rating": "★★★★★",
     "p_id": 77,"type": "Liquid",
     "name": "Oud Essential Oil Attar",
-    "price": 1663,
+    "quantity":999 ,"price": 1663,
     "size": "8ml",
     "disc": {
       "shape": "Custom",
@@ -1442,7 +1441,7 @@
     "rating": "★★★★★",
     "p_id": 77,"type": "Liquid",
     "name": "Desi Gulab Attar",
-    "price": 1263,
+    "quantity":999 ,"price": 1263,
     "size": "5ml",
     "disc": {
       "shape": "Custom",
@@ -1461,7 +1460,7 @@
     "rating": "★★★★✬",
     "p_id": 77,"type": "Liquid",
     "name": "Floral Jasmine Attar",
-    "price": 863,
+    "quantity":999 ,"price": 863,
     "size": "5ml",
     "disc": {
       "shape": "Custom",
@@ -1480,7 +1479,7 @@
     "rating": "★★★★★",
     "p_id": 77,"type": "Liquid",
     "name": "Long Lasting And Addictive Personal Perfume Oil Fragrance",
-    "price": 1563,
+    "quantity":999 ,"price": 1563,
     "size": "8ml",
     "disc": {
       "shape": "Custom",
@@ -1499,7 +1498,7 @@
     "rating": "★★★★✬",
     "p_id": 77,"type": "Liquid",
     "name": "The Luxurious Scent Of Arabia ",
-    "price": 2567,
+    "quantity":999 ,"price": 2567,
     "size": "8ml",
     "disc": {
       "shape": "Custom",
@@ -1518,7 +1517,7 @@
     "rating": "★★★★✬",
     "p_id": 77,"type": "Liquid",
     "name": "SWISS ARABIAN Gharaam",
-    "price": 3203,
+    "quantity":999 ,"price": 3203,
     "size": "5ml",
     "disc": {
       "shape": "Custom",
@@ -1537,7 +1536,7 @@
     "rating": "★★★★★",
     "p_id": 77,"type": "Liquid",
     "name": "ARABIAN Rose Malaki ",
-    "price": 3100,
+    "quantity":999 ,"price": 3100,
     "size": "8ml",
     "disc": {
       "shape": "Custom",
@@ -1557,7 +1556,7 @@
     "rating": "★★★★✬",
     "p_id": 77,"type": "Liquid",
     "name": "SWISS ARABIAN Amaani",
-    "price": 1500,
+    "quantity":999 ,"price": 1500,
     "size": "8ml",
     "disc": {
       "shape": "Custom",
@@ -1576,7 +1575,7 @@
     "rating": "★★★★✬",
     "p_id": 77,"type": "Liquid",
     "name": "Attar Al-Kaaba",
-    "price": 8500,
+    "quantity":999 ,"price": 8500,
     "size": "25ml",
     "disc": {
       "shape": "Custom",
@@ -1595,7 +1594,7 @@
     "rating": "★★★★★",
     "p_id": 77,"type": "Liquid",
     "name": "Rasasi Amber Ood",
-    "price": 3500,
+    "quantity":999 ,"price": 3500,
     "size": "18ml",
     "disc": {
       "shape": "Custom",

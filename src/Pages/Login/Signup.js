@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import SunnahLogo from './../../Shared/SunnahLogo';
 import { BounceLoader } from 'react-spinners';
+import Footer2 from '../../Shared/Footer2';
 
 const Signup = () => {
     const [signInWithGoogle] = useSignInWithGoogle(auth);
@@ -86,7 +87,7 @@ const Signup = () => {
                             <div className='font-bold'>Continue With Google</div>
                         </div></button>
                     <hr className='my-7' />
-                    <p className='text-center text-xs '>Copyright © {new Date().getFullYear()} - As Sunnah Store reserved</p>
+                   <Footer2></Footer2>
 
                 </div>
 

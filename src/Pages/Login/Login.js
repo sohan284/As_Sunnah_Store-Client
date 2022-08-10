@@ -3,6 +3,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { BounceLoader } from 'react-spinners';
 import auth from '../../firebase.init';
+import Footer2 from '../../Shared/Footer2';
 import SunnahLogo from '../../Shared/SunnahLogo';
 
 const Login = () => {
@@ -72,7 +73,7 @@ const Login = () => {
           <div className="divider my-8" ><small>New to Sunnah Store ?</small></div>
           <button onClick={handleSignup} className=' shadow-lg w-full p-1  cBtn rounded'>Create Your account</button>
           <hr className='my-7' />
-          <p className='text-center text-xs '>Copyright © {new Date().getFullYear()} - As Sunnah Store reserved</p>
+          <Footer2></Footer2>
 
         </div>
 
