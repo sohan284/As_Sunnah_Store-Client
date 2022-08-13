@@ -1,7 +1,7 @@
 
 import { Link, Outlet } from 'react-router-dom';
 import Footer2 from '../../Shared/Footer2';
-
+import React from 'react';
 import Header from './../../Shared/Header';
 
 

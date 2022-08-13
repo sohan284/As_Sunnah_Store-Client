@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from '../../Shared/Footer';
 import SunnahLogo from '../../Shared/SunnahLogo';
+import {toast} from 'react-toastify';
+
 
 const BuyNow = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
-    const [quantity,setQuantity] = useState();
+    const [setQuantity] = useState();
 
 
     useEffect(() => {
@@ -14,7 +16,6 @@ const BuyNow = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
-
     })
     let errorMessage;
     const percentage = parseInt(product.discount);
@@ -22,18 +23,8 @@ const BuyNow = () => {
     const previousPrice = parseInt(product.price - discountPrice);
 
     
-    const delivered = () => {
-        const val = document.getElementById('quantity_value').value;
-       const  intVal = parseInt(val)
-       if(intVal > 0 && intVal <= product.quantity){
-        const availableQuantity = product.quantity - intVal ;
-        setQuantity(availableQuantity);
-        document.getElementById('quantity_value').value = '0';
-       }
-       else  errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Please Enter a valid quantity</p>
-
-    }
-    const increase = () =>{
+ 
+    const increase = event =>{
         const val = document.getElementById('quantity_value').value;
         const intVal = parseInt(val);
         
@@ -52,7 +43,33 @@ const BuyNow = () => {
         }
       
     }
+    const delivered = () => {
+        const val = document.getElementById('quantity_value').value;
+       const  intVal = parseInt(val)
+       if(intVal > 0 && intVal <= product.quantity){
+        const availableQuantity = product.quantity - intVal ;
+        const updateQuantity = {availableQuantity};
+        
+        const proceed = window.confirm(`Are you want to buy ${intVal} items ??`);
+        if(proceed){
+            fetch(`https://as-sunnah.herokuapp.com/product/${productId}`,{
+                method : 'PUT',
+                headers : {
+                    'content-type':"application/json"
+                },
+                body:JSON.stringify(updateQuantity)
+            })
 
+            .then(res=>res.json())
+            .then(data=> {
+                toast.success(`${intVal} Items Ordered Successful`)
+                setQuantity(data);
+                document.getElementById('quantity_value').value = '0';
+            })
+        }
+       }
+       else  errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Please Enter a valid quantity</p>
+    }
     return (
         <div>
             <SunnahLogo></SunnahLogo>
@@ -71,16 +88,17 @@ const BuyNow = () => {
                     <h1 className='text-4xl text-[tomato] font-[noto]'>BDT {product.price}</h1>
                     <h3 className=' text-lg font-semibold'><span className='text-[#a0a0a0] font-normal mr-2 line-through'>BDT {previousPrice}</span> {product.discount}</h3>
                     <hr className='my-5' />
-                    <h3 className='text-sm font-bold my-3 text-[gray]'>Available : {quantity}</h3>
+                    <h3 className='text-sm font-bold my-3 text-[gray]'>Available : {product.quantity}</h3>
                     <div className='flex'>
                         <h1 onClick={decrease} className='bg-[#ff0000b9] btn-sm btn font-bold text-white text-xl w-10'>－</h1>
-                        <input  className='border-2 mx-2 text-center rounded w-12' type='text' defaultValue={0} id="quantity_value" />
+                        <input name='quantity' className='border-2 mx-2 text-center rounded w-12' type='text' defaultValue={0} id="quantity_value" />
                         <h1 onClick={increase}  className='bg-[#008000b6] btn-sm btn font-bold text-white text-xl w-10'>＋</h1>
                     </div>
                     {errorMessage}
                     <div className="my-5 ">
                         <button onClick={delivered} className="btn buyButton btn-primary m-1 px-12  button">Buy now</button>
                         <button className="btn button btn-primary m-1 px-9 button">Add to cart</button>
+                      
                     </div>
                 </div>
                 <div className='p-2'>
@@ -108,7 +126,6 @@ const BuyNow = () => {
 
             </div>
             <Footer></Footer>
-
         </div>
     );
 };
