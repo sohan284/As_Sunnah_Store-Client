@@ -46,6 +46,18 @@
   background: linear-gradient(30deg, #df982e ,rgb(170, 54, 0) 70%);
   color: #f7ffb1;
 }
+.exploreButton{
+  background: linear-gradient(30deg, #ffffff , rgb(255, 255, 255) 100%);
+  box-shadow: 1px 1px 5px 1px rgb(0, 192, 0);
+  color: rgb(0, 128, 28);
+  
+  border-radius: 100px;
+}
+.exploreButton:hover{
+  background: linear-gradient(30deg, #aff5b7 , rgb(242, 243, 170) 100%);
+ 
+ 
+}
 .cBtn{
   background: linear-gradient( #ffffff , #dfdfdf 100%);
   border: 1px solid rgb(139, 139, 139); 

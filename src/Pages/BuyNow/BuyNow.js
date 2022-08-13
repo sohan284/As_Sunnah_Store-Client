@@ -62,13 +62,33 @@ const BuyNow = () => {
 
             .then(res=>res.json())
             .then(data=> {
+                document.getElementById('quantity_value').value ="0";
                 toast.success(`${intVal} Items Ordered Successful`)
                 setQuantity(data);
-                document.getElementById('quantity_value').value = '0';
             })
         }
        }
        else  errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Please Enter a valid quantity</p>
+    }
+    const handleAddtoCart = () =>{
+        const name = product.name;
+        const img = product.img;
+        const price = product.price;
+        const cartItem = {name,img,price}
+        
+        toast('add to cart')
+        console.log(cartItem);
+        fetch('http://localhost:5000/cart',{
+            method:'POST',
+            headers:{
+              'content-type': 'application/json'
+            },
+            body:JSON.stringify(product)
+        })
+        .then(res=>res.json())
+        .then(data => 
+            console.log(data)
+            )
     }
     return (
         <div>
@@ -97,7 +117,7 @@ const BuyNow = () => {
                     {errorMessage}
                     <div className="my-5 ">
                         <button onClick={delivered} className="btn buyButton btn-primary m-1 px-12  button">Buy now</button>
-                        <button className="btn button btn-primary m-1 px-9 button">Add to cart</button>
+                        <button onClick={handleAddtoCart} className="btn button btn-primary m-1 px-9 button">Add to cart</button>
                       
                     </div>
                 </div>

@@ -11,8 +11,7 @@ const CardOne = ({img,name,rating,price,discount,handleBuyNow,_id}) => {
             {/* <h3 className='text-xs'><small>{size}</small> </h3> */}
             <h4 className='text-[orange]'>{rating}</h4>
             <div className="card-actions justify-end">
-            <button onClick={()=>handleBuyNow(_id)} className="px-4 text-xs p-2 font-semibold rounded uppercase buyButton btn-primary button">Buy now</button>
-              <button className="button px-2 font-semibold text-xs p-2 rounded uppercase btn-primary  button">Add to cart</button>
+            <button onClick={()=>handleBuyNow(_id)} className="px-4 text-xs p-2 w-[50%] font-bold rounded-full uppercase exploreButton btn-primary ">Explore More</button>
            </div>  
           </div>
         </div>
