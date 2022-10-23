@@ -30,7 +30,7 @@ const Signup = () => {
        navigate(from,{replace:true})
       }
       if (error) {
-        errorMessage = <p className='text-[red] font-semibold my-3 text-sm'>Error: {error?.message}</p>
+        errorMessage = <p className='text-[red] font-semibold my-3 text-sm'>Please enter valid information.</p>
       }
       if (loading) {
      return <div className='flex justify-center h-screen items-center'>
@@ -43,7 +43,7 @@ const Signup = () => {
     return (
         <div>
            <SunnahLogo></SunnahLogo>
-            <div className='flex justify-center '>
+            <div data-aos="zoom-in" className='flex justify-center '>
                 <div>
                     <div className='border rounded p-8 mt-5 shadow-lg'>
                         <div>

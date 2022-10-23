@@ -7,7 +7,7 @@ const SunnahLogo = () => {
         navigate('/');
     }
     return (
-        <div className='flex justify-center'>
+        <div data-aos="fade-down" className='flex justify-center'>
         <img onClick={navigateToHome} className='w-48 ml-5' src="https://i.ibb.co/GT1RTkC/amalan-sunnah-removebg-preview.png" alt="" />
         </div>
     );

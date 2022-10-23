@@ -22,6 +22,7 @@ import Cart from './Pages/Cart/Cart';
 import UserProfile from './Pages/UserProfile/UserProfile';
 import { ToastContainer} from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Donation from './Pages/Home/Donation/Donation';
 
 function App() {
   return (
@@ -39,6 +40,8 @@ function App() {
           <Route path='attar' element={<Attar></Attar>}></Route>
           <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
         </Route>
+        <Route path='donation' element={<Donation></Donation>}></Route>
+        
 
         <Route path='/buynow/:productId' element={
           <RequireAuth>

@@ -95,6 +95,29 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.donation{
+  opacity: 50%;
+}
+.oldagehome{
+  background-image: url(https://i.ibb.co/3k03YyK/sponsor-the-food-expenses-of-poor-senior-citizens-in-an-old-age-home.png);
+  opacity: 80%;
+}
+.oldagehome:hover{
+  transform: scale(1.03);
+  opacity: 100%;
+  box-shadow: 3px 3px 5px 3px rgb(213, 216, 198);
+  transition: transform .1s ease-in;
+}
+.orphanage{
+  background-image: url(https://i.ibb.co/Sdt8dcP/orphanage.jpg);
+  opacity: 80%;
+}
+.orphanage:hover{
+  transform: scale(1.05);
+  opacity: 100%;
+  box-shadow: 3px 3px 5px 3px rgb(170, 170, 170);
+  transition: transform .1s ease-in;
+}
 .App-link {
   color: #61dafb;
 }

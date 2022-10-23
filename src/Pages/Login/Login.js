@@ -29,7 +29,7 @@ const Login = () => {
     
   }
   if (error) {
-    errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Error: {error?.message}</p>
+    errorMessage = <p className='text-[red] my-3 font-semibold text-xs'>Email or password you've entered is incorrect.</p>
   }
   if (loading) {
     return <div className='flex justify-center h-screen items-center'>
@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div>
       <SunnahLogo></SunnahLogo>
-      <div className='flex justify-center '>
+      <div data-aos="zoom-in" className='flex justify-center '>
 
         <div>
           <div className='border rounded p-8 mt-5 shadow-lg'>
