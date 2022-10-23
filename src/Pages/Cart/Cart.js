@@ -9,9 +9,7 @@ const Cart = () => {
             .then(data => setItem(data))
 
     }, [])
-    const handleDelete = () => {
-
-    }
+    
     return (
         <div>
             <SunnahLogo></SunnahLogo>

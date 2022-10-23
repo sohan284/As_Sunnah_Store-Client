@@ -4,7 +4,7 @@ import Card from '../../../Shared/Card';
 
 const Product = ({search,product }) => {
   const navigate = useNavigate();
-  const { name, price, img, size, discount, p_id,_id,rating } = product;
+  const { name, price, img, discount,_id,rating } = product;
  
   const handleBuyNow = (id) =>{
     navigate(`/buynow/${id}`)

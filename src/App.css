@@ -55,8 +55,12 @@
 }
 .exploreButton:hover{
   background: linear-gradient(30deg, #aff5b7 , rgb(242, 243, 170) 100%);
- 
- 
+
+}
+.descLi{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
 }
 .cBtn{
   background: linear-gradient( #ffffff , #dfdfdf 100%);
