@@ -36,59 +36,37 @@ const Header = () => {
             <button><img className='w-10  hover:bg-black hover:rounded-full ' src="https://i.ibb.co/nwCs3xs/login.png" alt="" /></button></Link>}
       </div>
       {user &&
-        <div class="dropdown hidden lg:block dropdown-end">
-          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost btn-circle avatar hidden lg:block">
             <div class="w-10 rounded-full">
               <img src={user?.photoURL} alt="" />
             </div>
           </label>
-          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
 
-              <div className='font-bold  text-black'><Link to={'/userprofile'}> Profile </Link></div>
-
-            </li>
-            <li>
-
-              <div className='font-bold '><Link to={'/cart'}>Cart </Link></div>
-              <img className='w-6' src="https://i.ibb.co/mCPjZ7m/20460508-removebg-preview.png" alt="" />
-
-            </li>
-            <li onClick={logout}>
-
-              <div className='font-extrabold text-[red]'><Link to='/logout'>Logout</Link></div>
-              <img className='w-6  hover:rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" />
-
-            </li>
-          </ul>
-        </div>}
-
-
-      {user &&
-        <div className="dropdown dropdown-end">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
-          <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-
-            <li tabIndex="0">
-              <div className='font-bold  text-black'><Link to={'/userprofile'}> Profile </Link></div>
-              <img className='w-7 ml-2 rounded-full ' src={user?.photoURL} alt="" />
+         
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <li>
+              <Link to={'/userprofile'}>
+                <div className='font-bold  text-black'> Profile </div>
+                <img className='w-6 rounded-full lg:hidden' src={user?.photoURL} alt="" />
+              </Link>
             </li>
-
-            <li tabIndex="0">
-              <div className='font-bold  text-black'><Link to={'/cart'}> Cart </Link></div>
-              <img className='w-7 ml-2 rounded-full ' src="https://i.ibb.co/mCPjZ7m/20460508-removebg-preview.png" alt='' />
+            <li>
+              <Link to={'/cart'}>
+                <div className='font-bold '>Cart </div>
+                <img className='w-6' src="https://i.ibb.co/mCPjZ7m/20460508-removebg-preview.png" alt="" />
+              </Link>
             </li>
 
             <li onClick={logout}>
-              <div className='font-extrabold text-[red]'><Link to='/logout'>Logout</Link></div>
-              <img className='w-7 rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" />
+                <div className='font-extrabold text-[red]'>Logout</div>
+                <img className='w-6  hover:rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" />
             </li>
-
           </ul>
         </div>}
-
     </div>
   );
 };

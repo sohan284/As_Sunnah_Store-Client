@@ -1,8 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const OldAgeHome = () => {
+    const navigate = useNavigate()
+    const handleNavigate = () =>{
+        navigate('/oldagehome')
+    }
     return (
-        <div data-aos="zoom-in-up">
+        <div onClick={handleNavigate} data-aos="zoom-in-up">
             <div class="hero h-72 oldagehome">
                 <div class="hero-overlay"></div>
                 <div class="hero-content text-center text-neutral-content">

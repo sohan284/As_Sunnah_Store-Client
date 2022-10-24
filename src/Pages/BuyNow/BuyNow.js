@@ -24,8 +24,8 @@ const BuyNow = () => {
 
 
     let productQuantity;
-    if(product.quantity > 0 ){
-         productQuantity = product.quantity;
+    if (product.quantity > 0) {
+        productQuantity = product.quantity;
     }
     else productQuantity = <p className='inline text-[#ff0000c4]'>Out of stock</p>
 
@@ -55,8 +55,8 @@ const BuyNow = () => {
             const availableQuantity = product.quantity - intVal;
             const updateQuantity = { availableQuantity };
 
-            const proceed = window.confirm(`Are you want to buy ${intVal} items ??`);
-            if (proceed) {
+            
+            
                 fetch(`https://as-sunnah.herokuapp.com/product/${productId}`, {
                     method: 'PUT',
                     headers: {
@@ -71,7 +71,6 @@ const BuyNow = () => {
                         toast.success(`${intVal} Items Ordered Successful`)
                         setQuantity(data);
                     })
-            }
         }
         else errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Please Enter a valid quantity</p>
     }
@@ -122,8 +121,20 @@ const BuyNow = () => {
                         <h1 onClick={increase} className='bg-[#008000b6] btn-sm btn font-bold text-white text-xl w-10'>＋</h1>
                     </div>
                     {errorMessage}
-                    <div className="my-5 ">
-                        <button onClick={delivered} className="btn buyButton btn-primary m-1 px-12  button">Buy now</button>
+                    <div className="my-5">
+                        <label for="my-modal" className="btn buyButton btn-primary m-1 px-12  button modal-button">Buy now</label>
+                        <input type="checkbox" id="my-modal" class="modal-toggle" />
+                        <div class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box absolute">
+                                <h3 class="font-bold text-lg">Are you sure want to {product.name}</h3>
+                                
+                                <div class="modal-action">
+                                <label onClick={delivered} for="my-modal" class="btn-sm bg-[#019601] btn">Yes</label>
+                                <label for="my-modal" class="btn btn-sm right-2 top-2 bg-[#ff0000cb]">✕</label>
+                                   
+                                </div>
+                            </div>
+                        </div>
                         <button onClick={handleAddtoCart} className="btn button btn-primary m-1 px-9 button">Add to cart</button>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ const UserProfile = () => {
     return (
         <div>
             <SunnahLogo></SunnahLogo>
-            <div className='text-center  w-72 rounded-xl border mx-auto mt-12 shadow-2xl'>
+            <div data-aos="zoom-in-up" className='text-center  w-72 rounded-xl border mx-auto mt-12 shadow-2xl'>
                 <h1 className='mt-5 text-3xl font-bold text-primary '>Profile</h1>
                 <div className='font-bold text-secondary justify-center flex mt-5 '>
                     <img className='w-28 rounded-full' src={user.photoURL} alt="" />

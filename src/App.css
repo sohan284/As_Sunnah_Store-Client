@@ -103,8 +103,12 @@
   opacity: 50%;
 }
 .oldagehome{
-  background-image: url(https://i.ibb.co/3k03YyK/sponsor-the-food-expenses-of-poor-senior-citizens-in-an-old-age-home.png);
+  background-image: url(https://i.ibb.co/nP7tbHD/old-wrinkled-woman-hands-holding-260nw-435046255.png);
   opacity: 80%;
+}
+.oldagehomedetails{
+  background-image: url(https://i.ibb.co/KxwrtrS/beauty-of-old-age-090816115625.jpg);
+  opacity: 70%;
 }
 .oldagehome:hover{
   transform: scale(1.03);
