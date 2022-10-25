@@ -60,10 +60,12 @@ const Header = () => {
                 <img className='w-6' src="https://i.ibb.co/mCPjZ7m/20460508-removebg-preview.png" alt="" />
               </Link>
             </li>
-
+            <hr className='my-3' />
             <li onClick={logout}>
+                <div>
                 <div className='font-extrabold text-[red]'>Logout</div>
                 <img className='w-6  hover:rounded-full ' src="https://i.ibb.co/3f3RZWY/logout.png" alt="" />
+                </div> 
             </li>
           </ul>
         </div>}

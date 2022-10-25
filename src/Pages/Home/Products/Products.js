@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useProducts from './../../../Hooks/useProducts';
 import Product from './Product';
+import { BounceLoader } from 'react-spinners';
 const Products = () => {
     const [products] = useProducts([]);
     const [search, setSearch] = useState('');
@@ -9,6 +10,15 @@ const Products = () => {
         const value = document.getElementById('default-search').value;
         setSearch(value);
         document.getElementById('default-search').value = '';
+    }
+    let loading ;
+    if(products.length === 0){
+      loading =  <div data-aos="zoom-in" className='flex justify-center mt-10 items-center'>
+        <BounceLoader
+          color="#6fc205"
+          size={100}
+        />
+      </div>
     }
     
     return (
@@ -24,24 +34,24 @@ const Products = () => {
                     <button onClick={handleSearch} className="text-white button absolute right-1 top-1  bottom-1 lg:bottom-1.5   focus:ring-4 focus:outline-none font-medium rounded-full  text-sm lg:px-5 px-3  dark:bg-primary hover:bg-green-800 dark:focus:ring-green-700">Search</button>
                 </div>
             </form>
-        
-                    <div data-aos="zoom-in" className="carousel banner w-full">
+                    <div data-aos="zoom-in" className="carousel lg:h-56
+                     banner w-full ">
                         <div id="slide1" className="carousel-item relative w-full">
-                            <img src=" https://i.ibb.co/7W6K8kB/Visit-www-reallygreatsite-com.jpg" className="w-full" alt='' />
+                            <img src=" https://i.ibb.co/9ZPgmvj/Visit-www-reallygreatsite-com-3.png" className="w-full" alt='' />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a href="#slide4" className="btn btn-circle">❮</a>
                                 <a href="#slide2" className="btn btn-circle">❯</a>
                             </div>
                         </div>
                         <div id="slide2" className="carousel-item relative w-full">
-                            <img src="https://i.ibb.co/9ZPgmvj/Visit-www-reallygreatsite-com-3.png" className="w-full" alt='' />
+                            <img src="https://i.ibb.co/DM3M8Ng/Visit-www-reallygreatsite-com-4.png " className="w-full" alt='' />
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a href="#slide1" className="btn btn-circle">❮</a>
                                 <a href="#slide3" className="btn btn-circle">❯</a>
                             </div>
                         </div>
                         <div id="slide3" className="carousel-item relative w-full">
-                            <img src="https://i.ibb.co/DM3M8Ng/Visit-www-reallygreatsite-com-4.png" className="w-full"  alt=''/>
+                            <img src="https://i.ibb.co/7W6K8kB/Visit-www-reallygreatsite-com.jpg" className="w-full"  alt=''/>
                             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <a href="#slide2" className="btn btn-circle">❮</a>
                                 <a href="#slide4" className="btn btn-circle">❯</a>
@@ -55,8 +65,7 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
-
-
+                    {loading}
             <div className='grid lg:grid-cols-2 sm:grid-cols-2 mt-3'>
 
                 {
