@@ -82,7 +82,7 @@ const BuyNow = () => {
         // const price = product.price;
         // const cartItem = { name, img, price }
 
-        toast('add to cart')
+        
         
         fetch('https://as-sunnah.herokuapp.com/cart', {
             method: 'POST',
@@ -93,7 +93,7 @@ const BuyNow = () => {
         })
             .then(res => res.json())
             .then(data =>
-                console.log(data)
+                toast('add to cart')
             )
     }
     return (
