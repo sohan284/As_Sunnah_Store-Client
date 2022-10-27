@@ -1,49 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import SunnahLogo from '../../Shared/SunnahLogo';
+import ShoppingCart from './ShoppingCart';
 
 const Cart = () => {
     const [items, setItem] = useState();
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/cart`)
+        fetch(`http://as-sunnah.herokuapp.com/cart`)
             .then(res => res.json())
             .then(data => setItem(data))
 
     }, [])
-    
+
     return (
         <div>
             <SunnahLogo></SunnahLogo>
-            <div>
-            <div class="overflow-x-auto">
-  <table class="table w-full">
-    {
-        items?.map((item)=>(
-            <div>
-                <tr>
-                <img width={'80px'} src={item.img} alt="" />
-                    <th>{item.name}</th>
-                    <th>{item.price}</th>
-                </tr>
+            <hr className='my-5 mb-20' />
+            <div className='flex justify-center container mx-auto'>
+                <div>
+                    <div className='flex justify-between font-semibold text-xl'>
+                        <h1>Shopping Cart</h1>
+                        <h1>{items?.length} Items</h1>
+                    </div>
+                    <hr className='my-3' />
+                    
+                    {
+                        items?.map((item) => (<ShoppingCart key={item.id} item={item}></ShoppingCart>))
+                    }
+                    <hr className='my-5'/>
+                </div>
+                
+
             </div>
-        ))
-
-
-
-
-
-
-
-
-
-
-        
-
-    }
-   
-  </table>
-</div>
-            </div>
-            
+          
         </div>
     );
 };

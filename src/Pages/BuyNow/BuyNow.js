@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Footer from '../../Shared/Footer';
 import SunnahLogo from '../../Shared/SunnahLogo';
-import { toast } from 'react-toastify';
 
 
 const BuyNow = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     const [setQuantity] = useState();
+    const [orderQuantity] = useState();
 
 
     useEffect(() => {
@@ -55,34 +56,35 @@ const BuyNow = () => {
             const availableQuantity = product.quantity - intVal;
             const updateQuantity = { availableQuantity };
 
-            
-            
-                fetch(`https://as-sunnah.herokuapp.com/product/${productId}`, {
-                    method: 'PUT',
-                    headers: {
-                        'content-type': "application/json"
-                    },
-                    body: JSON.stringify(updateQuantity)
-                })
 
-                    .then(res => res.json())
-                    .then(data => {
-                        document.getElementById('quantity_value').value = "0";
-                        toast.success(`${intVal} Items Ordered Successful`)
-                        setQuantity(data);
-                    })
+
+            fetch(`https://as-sunnah.herokuapp.com/product/${productId}`, {
+                method: 'PUT',
+                headers: {
+                    'content-type': "application/json"
+                },
+                body: JSON.stringify(updateQuantity)
+            })
+
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('quantity_value').value = "0";
+                    toast.success(`${intVal} Items Ordered Successful`)
+                    setQuantity(data);
+                })
         }
         else errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Please Enter a valid quantity</p>
     }
     const handleAddtoCart = () => {
-        const name = product.name;
-        const img = product.img;
-        const price = product.price;
-        const cartItem = { name, img, price }
+        const val = document.getElementById('quantity_value').value;
+        // const name = product.name;
+        // const img = product.img;
+        // const price = product.price;
+        // const cartItem = { name, img, price }
 
         toast('add to cart')
-        console.log(cartItem);
-        fetch('http://localhost:5000/cart', {
+        
+        fetch('https://as-sunnah.herokuapp.com/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -122,16 +124,16 @@ const BuyNow = () => {
                     </div>
                     {errorMessage}
                     <div className="my-5">
-                        <label for="my-modal" className="btn buyButton btn-primary m-1 px-12  button modal-button">Buy now</label>
-                        <input type="checkbox" id="my-modal" class="modal-toggle" />
-                        <div class="modal modal-bottom sm:modal-middle">
-                            <div class="modal-box absolute">
-                                <h3 class="font-bold text-lg">Are you sure want to {product.name}</h3>
-                                
-                                <div class="modal-action">
-                                <label onClick={delivered} for="my-modal" class="btn-sm bg-[#019601] btn">Yes</label>
-                                <label for="my-modal" class="btn btn-sm right-2 top-2 bg-[#ff0000cb]">✕</label>
-                                   
+                        <label htmlFor="my-modal" className="btn buyButton btn-primary m-1 px-12  button modal-button">Buy now</label>
+                        <input type="checkbox" id="my-modal" className="modal-toggle" />
+                        <div className="modal modal-bottom sm:modal-middle">
+                            <div className="modal-box absolute">
+                                <h3 className="font-bold text-lg">Are you sure want to {product.name}</h3>
+
+                                <div className="modal-action">
+                                    <label onClick={delivered} htmlFor="my-modal" className="btn-sm bg-[#019601] btn">Yes</label>
+                                    <label htmlFor="my-modal" className="btn btn-sm right-2 top-2 bg-[#ff0000cb]">✕</label>
+
                                 </div>
                             </div>
                         </div>
