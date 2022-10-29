@@ -46,18 +46,18 @@ const Cart = () => {
         <div>
             <SunnahLogo></SunnahLogo>
             <hr className='my-5 mb-20' />
-            <div className='flex justify-center container mx-auto'>
-                <div>
-                    <div className='flex justify-between font-semibold text-xl'>
+            <div  className='flex  justify-center container mx-auto'>
+                <div className='border-2 rounded-xl'>
+                    <div data-aos="zoom-in" className='flex justify-between rounded-t-lg bg-secondary p-3 font-semibold text-xl'>
                         <h1>Shopping Cart</h1>
                         <h1>{items?.length} Items</h1>
                     </div>
-                    <hr className='my-3' />
+                    
                     {
-                        items.map(item => <div key={item.id}> 
-                                <div className='grid p-1 rounded-lg grid-cols-2 my-3'>
+                        items.map(item => <div data-aos="zoom-in" key={item.id}> 
+                                <div className='grid p-1 rounded grid-cols-2 my-3'>
                                     <div className='flex  my-1 px-5'>
-                                        <img className='w-20 mr-5' src={item.img} alt="" />
+                                        <img className='w-20 h-20 mr-5' src={item.img} alt="" />
                                         <div>
                                             <h4 className='text-xs font-semibold'>{item.name}</h4>
                                             <h4 className='text-xs text-accent mt-2'>{item.disc.brand_name}</h4>
@@ -65,7 +65,7 @@ const Cart = () => {
 
                                         </div>
                                     </div>
-                                    <div className='ml- grid lg:grid-cols-4 gap-2'>
+                                    <div className=' grid  lg:grid-cols-4 gap-2'>
                                         <p className='text-[#ff2600b9] font-semibold'>{item.price}Tk</p>
                                         <div className='flex'>
                                             <h1 onClick={decrease} className='bg-transparent btn btn-ghost btn-circle btn-sm border-none font-bold text-black text-xl'>－</h1>
@@ -74,17 +74,14 @@ const Cart = () => {
                                         </div>
                                         <h4 onClick={() => handleDeleteCart(item._id)} className='btn w-10 btn-error h-10  btn-circle btn-sm bg-[#cecece] border-none  '> <img className='h-8' src="https://i.ibb.co/dD23k5K/delete.png" alt="" /> </h4>
                                     </div>
-                                </div>    
+                                    
+                                </div>  
+                                <hr />  
                                                       
                         </div>)
                     }
-
-                    {/* {
-                        items?.map((item) => (<ShoppingCart key={item.id} item={item}></ShoppingCart>))
-                    } */}
-                    <hr className='my-5' />
+                    
                 </div>
-
 
             </div>
 
