@@ -3,13 +3,15 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Footer from '../../Shared/Footer';
 import SunnahLogo from '../../Shared/SunnahLogo';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 
 const BuyNow = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     const [setQuantity] = useState();
-    const [orderQuantity] = useState();
+    const [user,loading] = useAuthState(auth);
 
 
     useEffect(() => {
@@ -49,6 +51,7 @@ const BuyNow = () => {
         }
 
     }
+    
     const delivered = () => {
         const val = document.getElementById('quantity_value').value;
         const intVal = parseInt(val)
@@ -75,27 +78,52 @@ const BuyNow = () => {
         }
         else errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Please Enter a valid quantity</p>
     }
+
     const handleAddtoCart = () => {
         const val = document.getElementById('quantity_value').value;
-        // const name = product.name;
-        // const img = product.img;
-        // const price = product.price;
-        // const cartItem = { name, img, price }
+        const orderQuantity = parseInt(val)
+        if (orderQuantity > 0 && orderQuantity <= product.quantity){
+            const availableQuantity = product.quantity - orderQuantity;
+            const updateQuantity = { availableQuantity };
+            
+            fetch(`https://as-sunnah.herokuapp.com/product/${productId}`, {
+                method: 'PUT',
+                headers: {
+                    'content-type': "application/json"
+                },
+                body: JSON.stringify(updateQuantity)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('quantity_value').value = "0";
+                    setQuantity(data);
+                })
 
-        
-        
-        fetch('https://as-sunnah.herokuapp.com/cart', {
+        } 
+        const newCart = {
+            "_id" : product._id,
+            "user" : user.email,
+            "name" : product.name,
+            "price" : product.price,
+            "brand_name" : product.disc.brand_name,
+            "place_origin" : product.disc.place_origin,
+            "img" : product.img,
+            "orderQuantity" : orderQuantity
+        }
+        fetch('http://localhost:5000/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(product)
+            body: JSON.stringify(newCart)
         })
             .then(res => res.json())
             .then(data =>
-                toast('add to cart')
+                toast.success(`${orderQuantity} Items Added to cart`)
             )
+          
     }
+
     return (
         <div>
             <SunnahLogo></SunnahLogo>
@@ -119,7 +147,7 @@ const BuyNow = () => {
                     <h3 className='text-sm font-bold my-3 text-[gray]'>Available : {productQuantity} </h3>
                     <div className='flex'>
                         <h1 onClick={decrease} className='bg-[#ff0000b9] btn-sm btn font-bold text-white text-xl w-10'>－</h1>
-                        <input name='quantity' className='border-2 mx-2 text-center rounded w-12' type='text' defaultValue={0} id="quantity_value" />
+                        <input name='quantity' className='border-2 mx-2 text-center rounded w-12' type='text' defaultValue={1} id="quantity_value" />
                         <h1 onClick={increase} className='bg-[#008000b6] btn-sm btn font-bold text-white text-xl w-10'>＋</h1>
                     </div>
                     {errorMessage}
