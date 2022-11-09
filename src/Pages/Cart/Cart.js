@@ -11,7 +11,7 @@ const Cart = () => {
     console.log(user);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/cart/${user?.email}`)
+        fetch(`http://as-sunnah.herokuapp.com/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setItem(data))
     }, [])
@@ -33,7 +33,7 @@ const Cart = () => {
         //     .then(data => {
         //         console.log(data);
         //     })
-        fetch(`http://localhost:5000/cart/${id}`, {
+        fetch(`http://as-sunnah.herokuapp.com/cart/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
