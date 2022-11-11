@@ -5,9 +5,10 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-fi
 import SunnahLogo from './../../Shared/SunnahLogo';
 import { BounceLoader } from 'react-spinners';
 import Footer2 from '../../Shared/Footer2';
+import useToken from '../../Hooks/useToken';
 
 const Signup = () => {
-    const [signInWithGoogle] = useSignInWithGoogle(auth);
+    const [signInWithGoogle,gUser] = useSignInWithGoogle(auth);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const location = useLocation();
@@ -26,9 +27,12 @@ const Signup = () => {
         navigate('/login');
 
     }
-    if (user) {
-       navigate(from,{replace:true})
-      }
+    const [token] = useToken(user || gUser)
+    
+    if(user || gUser ){ 
+            navigate(from,{replace:true})     
+    }
+
       if (error) {
         errorMessage = <p className='text-[red] font-semibold my-3 text-sm'>Please enter valid information.</p>
       }

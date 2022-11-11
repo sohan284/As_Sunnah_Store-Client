@@ -110,7 +110,7 @@ const BuyNow = () => {
             "img" : product.img,
             "orderQuantity" : orderQuantity
         }
-        fetch('http://as-sunnah.herokuapp.com/cart', {
+        fetch('https://as-sunnah.herokuapp.com/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

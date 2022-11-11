@@ -13,7 +13,7 @@ const Footer = () => {
       <div>
       <img onClick={navigateToHome} className='w-48 ml-5' src="https://i.ibb.co/GT1RTkC/amalan-sunnah-removebg-preview.png" alt="" />
         </div>  <p className="font-bold">
-        AS Sunnah Store Ltd.
+        AS Sunnah Venture Ltd.
         </p>
         <p>Copyright © 2022 - All right reserved</p>
       </div>

@@ -5,7 +5,7 @@ const Footer2 = () => {
 
         <div>
             <p className="font-bold text-center text-xs ">
-                AS Sunnah Store Ltd.
+                AS Sunnah Venture Ltd.
             </p>
             <p className='text-center text-xs my-2 '>Copyright © {new Date().getFullYear()} - All right reserved</p>
         </div>
