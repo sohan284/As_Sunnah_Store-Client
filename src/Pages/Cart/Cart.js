@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import useProducts from '../../Hooks/useProducts';
 import SunnahLogo from '../../Shared/SunnahLogo';
 import Footer2 from './../../Shared/Footer2';
+import TotalAmount from './TotalAmount';
 
 const Cart = () => {
-    const [product]= useProducts()
     const [items, setItem] = useState();
     const [user] = useAuthState(auth);
-    console.log(user);
+
 
     useEffect(() => {
         fetch(`https://as-sunnah.herokuapp.com/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setItem(data))
-    }, [])
-
+    })
     const handleDeleteCart = (id) => {
         // const availableQuantity = product.quantity + orderQuantity;
         // const updateQuantity = { availableQuantity };
@@ -68,8 +66,8 @@ const Cart = () => {
                                         <img className='w-16 h-16 mr-5' src={item.img} alt="" />
                                         <div className='pt-2'>
                                             <h4 className='text-xs font-semibold'>{item.name}</h4>
-                                            <h4 className='text-xs text-accent mt-2'>{item?.brand_name}</h4>
-                                            <h4 className='text-xs text-accent'>{item?.place_origin}</h4>
+                                            <h4 className='text-[11px] text-[gray] mt-2'>{item?.brand_name}</h4>
+                                            <h4 className='text-[11px] text-[gray]'>{item?.place_origin}</h4>
 
                                         </div>
                                     </div>
@@ -82,16 +80,16 @@ const Cart = () => {
                                         </div>
                                        
                                     </div>
-                                    
                                 </div>  
                             <hr />
-
+                            
                         </div>)
                     }
 
                 </div>
-
+                
             </div>
+            <TotalAmount></TotalAmount>
             <hr className='my-5 mt-20' />
             <Footer2></Footer2>
 

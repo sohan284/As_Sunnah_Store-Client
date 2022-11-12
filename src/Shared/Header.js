@@ -37,8 +37,8 @@ const Header = () => {
       </div>
       {user &&
         <div className="dropdown dropdown-end">
-          <label tabIndex="0" className="btn btn-ghost btn-circle avatar hidden lg:block">
-            <div className="w-10 rounded-full">
+          <label tabIndex="0" className="btn-circle mt-1 avatar hidden lg:block">
+            <div className="w-10 hover:w-[43px] rounded-full">
               <img src={user?.photoURL} alt="" />
             </div>
           </label>

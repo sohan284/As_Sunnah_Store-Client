@@ -11,7 +11,7 @@ const BuyNow = () => {
     const { productId } = useParams();
     const [product, setProduct] = useState({});
     const [setQuantity] = useState();
-    const [user,loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
 
     useEffect(() => {
