@@ -11,6 +11,7 @@ const Header = () => {
   }
   const logout = () => {
     signOut(auth);
+    localStorage.removeItem('accessToken');
   }
   return (
     <div data-aos="fade-down" className="navbar bg-base-100 mb-10">
@@ -59,6 +60,11 @@ const Header = () => {
                 <div className='font-bold '>Cart </div>
                 <img className='w-6' src="https://i.ibb.co/mCPjZ7m/20460508-removebg-preview.png" alt="" />
               </Link>
+            </li>
+            <li>
+              <Link to={'/users'}>
+                <div className='font-bold '>All Users</div>
+               </Link>
             </li>
             <hr className='my-3' />
             <li onClick={logout}>

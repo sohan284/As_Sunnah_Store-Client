@@ -11,7 +11,7 @@ const Cart = () => {
 
 
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/cart/${user?.email}`)
+        fetch(`http://as-sunnah.herokuapp.com/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
