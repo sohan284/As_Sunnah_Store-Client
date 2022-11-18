@@ -26,6 +26,8 @@ import Donation from './Pages/Home/Donation/Donation';
 import OrphanageDetails from './Pages/Home/Donation/OrphanageDetails';
 import OldAgeHomeDetails from './Pages/Home/Donation/OldAgeHomeDetails';
 import Users from './Pages/Home/Admin/Users';
+import RequireAdmin from './Pages/Login/RequireAdmin';
+import AddProduct from './Pages/Home/Admin/AddProduct';
 
 function App() {
   return (
@@ -46,10 +48,19 @@ function App() {
         <Route path='donation' element={<Donation></Donation>}></Route>
         <Route path='orphanage' element={<OrphanageDetails></OrphanageDetails>}></Route>
         <Route path='oldagehome' element={<OldAgeHomeDetails></OldAgeHomeDetails>}></Route>
-        <Route path='users' element={<Users></Users>}></Route>
-        
-        
 
+        <Route path='/addProduct' element={
+          <RequireAdmin>
+          <AddProduct></AddProduct>
+          </RequireAdmin>
+        }></Route>
+        <Route path='/manageUsers' element={
+          <RequireAdmin>
+          <Users></Users>
+          </RequireAdmin>
+        }></Route>
+       
+        
         <Route path='/buynow/:productId' element={
           <RequireAuth>
             <BuyNow></BuyNow>

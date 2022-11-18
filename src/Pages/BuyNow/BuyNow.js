@@ -146,13 +146,13 @@ const BuyNow = () => {
                     <hr className='my-5' />
                     <h3 className='text-sm font-bold my-3 text-[gray]'>Available : {productQuantity} </h3>
                     <div className='flex'>
-                        <h1 onClick={decrease} className='bg-[#ff0000b9] btn-sm btn font-bold text-white text-xl w-10'>－</h1>
-                        <input name='quantity' className='border-2 mx-2 text-center rounded w-12' type='text' defaultValue={1} id="quantity_value" />
-                        <h1 onClick={increase} className='bg-[#008000b6] btn-sm btn font-bold text-white text-xl w-10'>＋</h1>
+                        <h1 onClick={decrease} className='bg-[#ff0000b9] btn-xs btn  text-white text-base w-10'>－</h1>
+                        <input name='quantity' className='border-2 mx-2 text-center h-6 rounded w-10' type='text' defaultValue={1} id="quantity_value" />
+                        <h1 onClick={increase} className='bg-[#008000b6] btn-xs btn  text-white text-base w-10'>＋</h1>
                     </div>
                     {errorMessage}
                     <div className="my-5">
-                        <label htmlFor="my-modal" className="btn buyButton btn-primary m-1 px-12  button modal-button">Buy now</label>
+                        <label htmlFor="my-modal" className="btn buyButton btn-primary btn-sm m-1 px-12  button modal-button">Buy now</label>
                         <input type="checkbox" id="my-modal" className="modal-toggle" />
                         <div className="modal modal-bottom sm:modal-middle">
                             <div className="modal-box absolute">
@@ -165,7 +165,7 @@ const BuyNow = () => {
                                 </div>
                             </div>
                         </div>
-                        <button onClick={handleAddtoCart} className="btn button btn-primary m-1 px-9 button">Add to cart</button>
+                        <button onClick={handleAddtoCart} className="btn button btn-primary btn-sm m-1 px-9 button">Add to cart</button>
                     </div>
                 </div>
                 <div data-aos="zoom-in"

@@ -11,27 +11,11 @@ const Cart = () => {
 
 
     useEffect(() => {
-        fetch(`http://as-sunnah.herokuapp.com/cart/${user?.email}`)
+        fetch(`https://as-sunnah.herokuapp.com/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
     const handleDeleteCart = (id) => {
-        // const availableQuantity = product.quantity + orderQuantity;
-        // const updateQuantity = { availableQuantity };
-        // console.log(id,updateQuantity)
-
-        // fetch(`https://as-sunnah.herokuapp.com/product/${id}`, {
-        //     method: 'PUT',
-        //     headers: {
-        //         'content-type': "application/json"
-        //     },
-        //     body: JSON.stringify(updateQuantity)
-        // })
-
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //     })
         fetch(`https://as-sunnah.herokuapp.com/cart/${id}`, {
             method: 'DELETE'
         })

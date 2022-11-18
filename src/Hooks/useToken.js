@@ -10,7 +10,7 @@ const useToken = user => {
         const currentUser = {email : email , name : name , photoURL : photoURL };
         console.log(user)
         if(email){
-            fetch(`http://as-sunnah.herokuapp.com/user/${email}`,{
+            fetch(`https://as-sunnah.herokuapp.com/user/${email}`,{
                 method:'PUT',
                 headers:{
                     'content-type':'application/json'
@@ -19,7 +19,6 @@ const useToken = user => {
             })
             .then(res=>res.json())
             .then(data=>{
-                console.log(data.token);
                 const accessToken = data.token
                 localStorage.setItem('accessToken',accessToken);
                 setToken(data);
