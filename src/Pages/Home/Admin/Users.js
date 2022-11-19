@@ -6,6 +6,7 @@ import Footer2 from './../../../Shared/Footer2';
 const Users = () => {
     const [dUsers, setDuser] = useState();
     const [users,setUser] = useState()
+    console.log(users)
     useEffect(() => {
         fetch(`https://as-sunnah.herokuapp.com/user`
             , {
@@ -55,7 +56,7 @@ const Users = () => {
     return (
         <div>
             <SunnahLogo></SunnahLogo>
-            <div class="overflow-x-auto my-10 container mx-auto rounded-lg border-2 shadow-lg w-full">
+            <div data-aos="zoom-in" class="overflow-x-auto my-10 container mx-auto rounded-lg border-2 shadow-lg w-full">
                 <table class="table w-full">
                     <thead>
                         <tr>

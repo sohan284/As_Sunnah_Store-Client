@@ -3,7 +3,7 @@ import React from 'react';
 const CardOne = ({img,name,rating,price,discount,handleBuyNow,_id}) => {
     return (
         <div>
-        <div className="card card-side productCard ">
+        <div  className="card card-side productCard ">
           <figure> <img className='w-28' src={img} alt="" /></figure>
           <div className="card-body">
             <h2 className="card-title  text-base">{name}</h2>

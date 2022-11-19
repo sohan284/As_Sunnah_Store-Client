@@ -10,7 +10,7 @@ const Product = ({search,product }) => {
     navigate(`/buynow/${id}`)
 
   }
-  if(name.toLowerCase().includes(search)){
+  if(name?.toLowerCase().includes(search)){
     return (
         <div>
           <Card name={name} img={img} price={price} rating={rating} discount={discount} _id={_id} handleBuyNow={handleBuyNow}></Card>

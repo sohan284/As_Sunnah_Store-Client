@@ -4,6 +4,7 @@ const Footer2 = () => {
     return (
 
         <div>
+             <hr className='my-5' />
             <p className="font-bold text-center text-xs ">
                 AS Sunnah Venture Ltd.
             </p>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import useAdmin from '../../Hooks/useAdmin';
 import Footer from '../../Shared/Footer';
 import SunnahLogo from '../../Shared/SunnahLogo';
 
@@ -12,6 +13,8 @@ const BuyNow = () => {
     const [product, setProduct] = useState({});
     const [setQuantity] = useState();
     const [user] = useAuthState(auth);
+    const [admin] =useAdmin(user);
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -123,6 +126,9 @@ const BuyNow = () => {
             )
           
     }
+    const handleCustomise = (id) =>{
+        navigate(`/manageProduct/${id}`)
+    }
 
     return (
         <div>
@@ -145,12 +151,17 @@ const BuyNow = () => {
                     <h3 className=' text-lg font-semibold'><span className='text-[#a0a0a0] font-normal mr-2 line-through'>BDT {previousPrice}</span> {product.discount}</h3>
                     <hr className='my-5' />
                     <h3 className='text-sm font-bold my-3 text-[gray]'>Available : {productQuantity} </h3>
+                  {!admin.admin &&
                     <div className='flex'>
                         <h1 onClick={decrease} className='bg-[#ff0000b9] btn-xs btn  text-white text-base w-10'>－</h1>
                         <input name='quantity' className='border-2 mx-2 text-center h-6 rounded w-10' type='text' defaultValue={1} id="quantity_value" />
                         <h1 onClick={increase} className='bg-[#008000b6] btn-xs btn  text-white text-base w-10'>＋</h1>
-                    </div>
+                    </div>}
                     {errorMessage}
+                    {admin.admin && 
+                     <button onClick={()=>handleCustomise(product._id)} className="btn button btn-primary btn-sm m-1 px-9 button">Customise Product</button>
+                    }
+                    {!admin.admin && 
                     <div className="my-5">
                         <label htmlFor="my-modal" className="btn buyButton btn-primary btn-sm m-1 px-12  button modal-button">Buy now</label>
                         <input type="checkbox" id="my-modal" className="modal-toggle" />
@@ -166,7 +177,7 @@ const BuyNow = () => {
                             </div>
                         </div>
                         <button onClick={handleAddtoCart} className="btn button btn-primary btn-sm m-1 px-9 button">Add to cart</button>
-                    </div>
+                    </div>}
                 </div>
                 <div data-aos="zoom-in"
                     data-aos-duration="500" className='p-2'>

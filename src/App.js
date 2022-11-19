@@ -28,6 +28,8 @@ import OldAgeHomeDetails from './Pages/Home/Donation/OldAgeHomeDetails';
 import Users from './Pages/Home/Admin/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Home/Admin/AddProduct';
+import ManageProduct from './Pages/Home/Admin/ManageProduct';
+import UpdateProduct from './Pages/Home/Admin/UpdateProduct';
 
 function App() {
   return (
@@ -54,6 +56,19 @@ function App() {
           <AddProduct></AddProduct>
           </RequireAdmin>
         }></Route>
+
+        <Route path='/manageProduct' element={
+          <RequireAdmin>
+          <ManageProduct></ManageProduct>
+          </RequireAdmin>
+        }></Route>
+        
+        <Route path='/manageProduct/:productId' element={
+          <RequireAdmin>
+          <UpdateProduct></UpdateProduct>
+          </RequireAdmin>
+        }></Route>
+
         <Route path='/manageUsers' element={
           <RequireAdmin>
           <Users></Users>
