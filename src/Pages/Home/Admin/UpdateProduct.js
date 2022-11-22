@@ -5,13 +5,7 @@ import SunnahLogo from './../../../Shared/SunnahLogo';
 
 const UpdateProduct = ({ id }) => {
     const navigate = useNavigate()
-    const [name, setName] = useState();
-    const [price, setPrice] = useState();
-    const [quantity, setQuantity] = useState();
-    const [discount, setDiscount] = useState();
-    const [color, setColor] = useState();
-    const [size, setSize] = useState();
-    const [img, setImg] = useState();
+    const [img] = useState();
     const { productId } = useParams();
     console.log(productId);
     const [product, setProduct] = useState();
@@ -62,7 +56,6 @@ const UpdateProduct = ({ id }) => {
                         <div>
                         <h1 className='font-bold pl-1 text-[10px]'>Product Code</h1>
                             <input disabled className=' w-24 my-1 text-xs  shadow-lg border rounded-md p-1'
-                               
                                 placeholder={product?.p_id}
                             />
                         </div>
@@ -94,7 +87,6 @@ const UpdateProduct = ({ id }) => {
                         name='Name'
                         id='name'
                         defaultValue={product?.name}
-                        onChange={(e) => setName(e.target.value)}
                         placeholder={product?.name}
                     />
                  <div className='flex flex-col lg:flex-row mx-auto justify-evenly'>
@@ -105,7 +97,7 @@ const UpdateProduct = ({ id }) => {
                         type="Number"
                         id='price'
                         defaultValue={product?.price}
-                        onChange={(e) => setPrice(e.target.value)}
+                        
                      
                     />
                     </div>
@@ -116,7 +108,6 @@ const UpdateProduct = ({ id }) => {
                         type="Number"
                         id='quantity'
                         defaultValue={product?.quantity}
-                        onChange={(e) => setQuantity(e.target.value)}
                         placeholder={product?.quantity}
                     />
 
@@ -128,7 +119,6 @@ const UpdateProduct = ({ id }) => {
                                 type="text"
                                 id='color'
                                 defaultValue={product?.disc?.color}
-                                onChange={(e) => setColor(e.target.value)}
                                 placeholder={product?.disc?.color}
                             />
                           
@@ -140,7 +130,6 @@ const UpdateProduct = ({ id }) => {
                                 type="text"
                                 id='size'
                                 defaultValue={product?.disc?.size}
-                                onChange={(e) => setSize(e.target.value)}
                                 placeholder={product?.disc?.size}
                             />
                     </div>
@@ -150,7 +139,6 @@ const UpdateProduct = ({ id }) => {
                         id='discount'
                         type="text"
                         defaultValue={product?.discount}
-                        onChange={(e) => setDiscount(e.target.value)}
                         placeholder={product?.discount}
                     />
                     </div>
@@ -162,7 +150,6 @@ const UpdateProduct = ({ id }) => {
                     <input className='mb-5 shadow-lg border rounded-md p-1'
                         name='img'
                         type="text"
-                        onChange={(e) => setImg(e.target.value)}
                         placeholder={product?.img}
                     />
                    

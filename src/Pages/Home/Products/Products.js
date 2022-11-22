@@ -1,26 +1,44 @@
-import React, { useState } from 'react';
-import useProducts from './../../../Hooks/useProducts';
-import Product from './Product';
+import React, { useEffect, useState } from 'react';
 import { BounceLoader } from 'react-spinners';
+import Product from './Product';
 const Products = () => {
-    const [products] = useProducts([]);
+    const [products,setProduct] = useState([]);
     const [search, setSearch] = useState('');
+    const [pageCount, setPageCount] = useState(0);
+    const [page,setPage] = useState()
+    const [size ,setSize] =useState(10);
+    useEffect(() => {
+        fetch(`https://as-sunnah.herokuapp.com/product?page=${page}&size=${size}`)
+            .then(res => res.json())
+            .then(data =>setProduct(data))
+
+    }, [page , size])
+    useEffect(() => {
+        fetch(`https://as-sunnah.herokuapp.com/productCount`)
+            .then(res => res.json())
+            .then(data =>{
+                const count = data.count;
+                const pages = Math.ceil(count/10);
+                setPageCount(pages);
+            })
+
+    }, [])
     const handleSearch = event => {
         event.preventDefault();
         const value = document.getElementById('default-search').value;
         setSearch(value);
         document.getElementById('default-search').value = '';
     }
-    let loading ;
-    if(products.length === 0){
-      loading =  <div data-aos="zoom-in" className='flex justify-center mt-10 items-center'>
-        <BounceLoader
-          color="#6fc205"
-          size={100}
-        />
-      </div>
+    let loading;
+    if (products.length === 0) {
+        loading = <div data-aos="zoom-in" className='flex justify-center mt-10 items-center'>
+            <BounceLoader
+                color="#6fc205"
+                size={100}
+            />
+        </div>
     }
-    
+
     return (
         <div>
             <form className='flex justify-center absolute lg:top-24 top-[120px] left-[20%] lg:left-[40%]'>
@@ -34,46 +52,33 @@ const Products = () => {
                     <button onClick={handleSearch} className="text-white button absolute right-1 top-1  bottom-1 lg:bottom-1.5   focus:ring-4 focus:outline-none font-medium rounded-full  text-sm lg:px-5 px-3  dark:bg-primary hover:bg-green-800 dark:focus:ring-green-700">Search</button>
                 </div>
             </form>
-                    <div data-aos="zoom-in" className="carousel lg:h-56
-                     banner w-full ">
-                        <div id="slide1" className="carousel-item relative w-full">
-                            <img src=" https://i.ibb.co/9ZPgmvj/Visit-www-reallygreatsite-com-3.png" className="w-full" alt='' />
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide4" className="btn btn-circle">❮</a>
-                                <a href="#slide2" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                        <div id="slide2" className="carousel-item relative w-full">
-                            <img src="https://i.ibb.co/DM3M8Ng/Visit-www-reallygreatsite-com-4.png " className="w-full" alt='' />
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide1" className="btn btn-circle">❮</a>
-                                <a href="#slide3" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                        <div id="slide3" className="carousel-item relative w-full">
-                            <img src="https://i.ibb.co/7W6K8kB/Visit-www-reallygreatsite-com.jpg" className="w-full"  alt=''/>
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide2" className="btn btn-circle">❮</a>
-                                <a href="#slide4" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                        <div id="slide4" className="carousel-item relative w-full">
-                            <img src="https://i.ibb.co/sJ7RSfq/Visit-www-reallygreatsite-com-1.png" className="w-full" alt=''/>
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide3" className="btn btn-circle">❮</a>
-                                <a href="#slide1" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                    </div>
-                    {loading}
+            <div data-aos="zoom-in" class=" shadow-xl shadow-green-200 mx-3">
+                <img className='w-full rounded-lg   shadow-xl' src="https://i.ibb.co/hD4nHKs/banner-islamic-financing.png" alt="Burger" />
+            </div>
+            {loading}
             <div className='grid lg:grid-cols-2 sm:grid-cols-2 mt-3'>
 
                 {
                     products.map(product => <Product key={product.id} search={search} product={product}></Product>)
                 }
-                
+
             </div>
-            
+            <div className='pagination mt-5 grid grid-cols-12 bg-slate-200'>
+            {
+                        [...Array(pageCount).keys()]
+                        .map(number => <div className=''>
+                            <button
+                            className={page=== number ? 'selected': ''}
+                            onClick={() => setPage(number)}
+                        >{number + 1}</button>
+                        </div>)
+                    }
+                <select className='bg-slate-200' name="" id="" onChange={e => setSize(e.target.value)}>
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                </select>
+            </div>
+
         </div>
 
     );

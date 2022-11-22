@@ -13,6 +13,7 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const location = useLocation();
     const [password, setPassword] = useState('');
+    const [cPassword, setCPassword] = useState('');
     let errorMessage;
     const [
         createUserWithEmailAndPassword,
@@ -28,6 +29,12 @@ const Signup = () => {
 
     }
     const [token] = useToken(user || gUser)
+
+    const handleSingUp = () =>{
+        if(/@g(oogle)?mail\.com$/.test(email) && password === cPassword){
+            createUserWithEmailAndPassword(email,password)
+        }
+    }
     
     if(token){ 
             navigate(from,{replace:true})     
@@ -50,13 +57,14 @@ const Signup = () => {
             <div data-aos="zoom-in" className='flex justify-center '>
                 <div>
                     <div className='border rounded p-8 mt-5 shadow-lg'>
-                        <div>
+                        <form>
                             <h1 className='text-3xl  font-bold mb-5'>Create Account</h1>
 
                             <h6 className='text-sm font-semibold '>Your Name</h6>
                             <input className='w-72 formInput' 
                             type="text"
                             value={name} 
+                            required
                             onChange={(e)=>setName(e.target.value)}
                             placeholder='Name' />
                            
@@ -64,22 +72,28 @@ const Signup = () => {
                             <input className='w-72 formInput' 
                             type="text"
                             value={email} 
+                            required
                             onChange={(e)=>setEmail(e.target.value)}
                             placeholder='Email' />
                             
                             <h6 className='text-sm font-semibold mt-5'>Password</h6>
-                            <input className='w-72 formInput' 
+                            <input  required className='w-72 formInput' 
                             type="password"
                             value={password} 
                             onChange={(e)=>setPassword(e.target.value)}
                             placeholder='Password' />
 
                             <h6 className='text-sm font-semibold mt-5'>Re-enter Password</h6>
-                            <input className='w-72 formInput' type="password" placeholder='re-password' />
+
+                            <input className='w-72 formInput' type="password"
+                            value={cPassword} 
+                            required
+                            onChange={(e)=>setCPassword(e.target.value)}
+                            placeholder='re-password' />
                             <br />
-                            <button onClick={()=>createUserWithEmailAndPassword(email,password)} className='w-72 button text-white font-bold rounded p-1 mt-5'>Signup</button>
+                            <button onClick={handleSingUp} className='w-72 button text-white font-bold rounded p-1 mt-5'>Signup</button>
                             {errorMessage}
-                        </div>
+                        </form>
                         <div className=" mt-5" ><small>Already have an account? <span onClick={handleLogin} className='font-semibold text-[blue] lgin' > Log-In</span></small> </div>
                        
                     </div>

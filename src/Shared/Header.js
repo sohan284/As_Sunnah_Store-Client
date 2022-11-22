@@ -3,7 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from "react-router-dom";
 import useAdmin from '../Hooks/useAdmin';
 import auth from './../firebase.init';
-import { BackspaceIcon, BackwardIcon, BeakerIcon, PlayCircleIcon, ShoppingCartIcon, UserIcon } from '@heroicons/react/24/solid';
+import {ShoppingCartIcon } from '@heroicons/react/24/solid';
 
 
 const Header = () => {
@@ -54,7 +54,7 @@ const Header = () => {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
 
-          <ul tabIndex="0" className="menu menu-compact bg-slate-100 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          <ul tabIndex="0" className="menu menu-compact bg-slate-100 dropdown-content mt-3 p-2 shadow  rounded-box w-52">
             <li>
               <Link to={'/userprofile'}>
                 <div className='font-semibold flex text-black'> <div className="h-4 w-5  mr-3 text-slate-500"> <svg className="h-5 w-5  mr-3 text-slate-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

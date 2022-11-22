@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+
 .banner{
   background-color: #ebebeb;
   box-shadow: 0px 0px 3px 3px rgb(8, 100, 0);
@@ -17,6 +18,21 @@
 }
 .formInput:focus{
   border: 3px solid rgb(6, 216, 6);
+}
+.customerReview:focus{
+  border: none;
+  background-color: #00ff0041;
+
+}
+.pagination button{
+  border: 1px solid green;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 8px;
+}
+.selected{
+  background: linear-gradient(30deg, #aad160 , #008000 100%);
+  color: white;
 }
 .button{
   background: linear-gradient(30deg, #aad160 , #008000 100%);

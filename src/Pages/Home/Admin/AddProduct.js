@@ -34,11 +34,6 @@ const AddProduct = () => {
             img : img 
 
         }
-        console.log(data)
-
-
-
-
         const url = `https://as-sunnah.herokuapp.com/product`;
         fetch(url, {
             method: 'POST',

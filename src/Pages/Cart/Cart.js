@@ -7,7 +7,6 @@ import Footer2 from './../../Shared/Footer2';
 const Cart = () => {
     const [items, setItem] = useState();
     const [user] = useAuthState(auth);
-    const [value, setValue] = useState(0)
     let totalAmount = 0;
 
     useEffect(() => {
@@ -103,14 +102,14 @@ const Cart = () => {
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td className='font-bold '>Subtotal</td>
+                        <td className='font-bold text-xl'>Total</td>
                        <td className=''>
                          <div>
-                         <p className='text-[tomato] font-bold'><h1>={totalAmount}</h1></p>
+                         <p className='text-[#f74e30] text-xl font-bold font-serif'><h1>= {totalAmount}</h1></p>
                         </div>
                         </td>
                        <td>
-                         <button className='btn btn-sm rounded-full bg-primary'>Proceed Checkout</button>
+                         <button className='btn btn-sm rounded-full button'>Proceed Checkout</button>
                         </td>
                         </tbody>
                         

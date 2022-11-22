@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import useAdmin from '../../Hooks/useAdmin';
 import Footer from '../../Shared/Footer';
 import SunnahLogo from '../../Shared/SunnahLogo';
+import AddReview from '../Reviews/AddReview';
 
 
 const BuyNow = () => {
@@ -181,7 +182,7 @@ const BuyNow = () => {
                 </div>
                 <div data-aos="zoom-in"
                     data-aos-duration="500" className='p-2'>
-                    <h2 className='text-secondary font-bold text-4xl'>About : </h2>
+                    <h2 className='text-primary font-bold text-2xl'>About : </h2>
                     <hr className='mt-5' />
                     <ul className='border-4'>
                         <li className='bg-[#e7e9e0] descLi'> <span className='text-primary font-bold '> Type : </span> <span className='font-semibold'>{product.disc?.product_type} {product.type}</span> </li>
@@ -204,6 +205,7 @@ const BuyNow = () => {
                 </div>
 
             </div>
+            <AddReview id={productId}></AddReview>
             <Footer></Footer>
         </div>
     );
