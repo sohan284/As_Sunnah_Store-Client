@@ -20,8 +20,8 @@ import BuyNow from './Pages/BuyNow/BuyNow';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Cart from './Pages/Cart/Cart';
 import UserProfile from './Pages/UserProfile/UserProfile';
-import { ToastContainer} from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Donation from './Pages/Home/Donation/Donation';
 import OrphanageDetails from './Pages/Home/Donation/OrphanageDetails';
 import OldAgeHomeDetails from './Pages/Home/Donation/OldAgeHomeDetails';
@@ -30,6 +30,7 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Home/Admin/AddProduct';
 import ManageProduct from './Pages/Home/Admin/ManageProduct';
 import UpdateProduct from './Pages/Home/Admin/UpdateProduct';
+import ContactUs from './Pages/Home/ContactUs';
 
 function App() {
   return (
@@ -46,36 +47,43 @@ function App() {
           <Route path='tasbih' element={<Tasbih></Tasbih>}></Route>
           <Route path='attar' element={<Attar></Attar>}></Route>
           <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
+
+          <Route path='/addProduct' element={
+            <RequireAdmin>
+              <AddProduct></AddProduct>
+            </RequireAdmin>
+          }></Route>
+
+          <Route path='/manageProduct' element={
+            <RequireAdmin>
+              <ManageProduct></ManageProduct>
+            </RequireAdmin>
+          }></Route>
+
+          <Route path='/manageUsers' element={
+            <RequireAdmin>
+              <Users></Users>
+            </RequireAdmin>
+          }></Route>
         </Route>
         <Route path='donation' element={<Donation></Donation>}></Route>
         <Route path='orphanage' element={<OrphanageDetails></OrphanageDetails>}></Route>
         <Route path='oldagehome' element={<OldAgeHomeDetails></OldAgeHomeDetails>}></Route>
+        <Route path='contactus' element={<ContactUs></ContactUs>}></Route>
 
-        <Route path='/addProduct' element={
-          <RequireAdmin>
-          <AddProduct></AddProduct>
-          </RequireAdmin>
-        }></Route>
 
-        <Route path='/manageProduct' element={
-          <RequireAdmin>
-          <ManageProduct></ManageProduct>
-          </RequireAdmin>
-        }></Route>
-        
+
+
+
         <Route path='/manageProduct/:productId' element={
           <RequireAdmin>
-          <UpdateProduct></UpdateProduct>
+            <UpdateProduct></UpdateProduct>
           </RequireAdmin>
         }></Route>
 
-        <Route path='/manageUsers' element={
-          <RequireAdmin>
-          <Users></Users>
-          </RequireAdmin>
-        }></Route>
-       
-        
+
+
+
         <Route path='/buynow/:productId' element={
           <RequireAuth>
             <BuyNow></BuyNow>

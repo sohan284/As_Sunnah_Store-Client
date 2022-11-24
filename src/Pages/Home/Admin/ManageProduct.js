@@ -1,9 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Footer2 from '../../../Shared/Footer2';
 import useProducts from './../../../Hooks/useProducts';
-import SunnahLogo from './../../../Shared/SunnahLogo';
 
 const ManageProduct = () => {
     const [products, setProduct] = useProducts();
@@ -28,13 +26,11 @@ const ManageProduct = () => {
     }
     return (
         <div>
-            <SunnahLogo></SunnahLogo>
-            <hr className='my-5' />
             <div data-aos="zoom-in" className='container  mx-auto'>
-                <h1 className='text-center font-serif font-bold text-2xl text-primary  my-5'>Update & Delete Product</h1>
+                <h1 className='text-center font-serif font-bold text-2xl text-primary'>Update & Delete Product</h1>
                 {
                     products.map(product => <div>
-                        <div className='flex w-[80%] rounded hover:bg-slate-200 border-2 bg-slate-100 my-2 p-1 mx-auto justify-between items-center'>
+                        <div className='flex mx-2  hover:bg-slate-200 border bg-slate-100 my-2 p-1  justify-between items-center'>
                             <div className='flex my-5 items-center'>
                                 <div className='h-12 w-12'>
                                     <img src={product.img} alt="" />
@@ -60,7 +56,6 @@ const ManageProduct = () => {
                 }
                 
             </div>
-            <Footer2></Footer2>
 
         </div>
     );

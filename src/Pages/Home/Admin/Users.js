@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import SunnahLogo from '../../../Shared/SunnahLogo';
+
 import Footer2 from './../../../Shared/Footer2';
 
 const Users = () => {
@@ -55,16 +55,15 @@ const Users = () => {
     }
     return (
         <div>
-            <SunnahLogo></SunnahLogo>
-            <div data-aos="zoom-in" class="overflow-x-auto my-10 container mx-auto rounded-lg border-2 shadow-lg w-full">
+            <div data-aos="zoom-in" class="overflow-x-auto container mt-5 mx-auto w-full">
                 <table class="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th></th>
-                            <th></th>
+                            <th className='bg-slate-100' ></th>
+                            <th className='bg-slate-100'>Name</th>
+                            <th className='bg-slate-100'>Email</th>
+                            <th className='bg-slate-100'></th>
+                            <th className='bg-slate-100'></th>
                         </tr>
                     </thead>
                     {
@@ -104,7 +103,6 @@ const Users = () => {
                     }
                 </table>
             </div>
-            <Footer2></Footer2>
         </div>
     );
 };
