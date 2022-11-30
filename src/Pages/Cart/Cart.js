@@ -3,10 +3,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SunnahLogo from '../../Shared/SunnahLogo';
 import Footer2 from './../../Shared/Footer2';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const [items, setItem] = useState();
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
     let totalAmount = 0;
 
     useEffect(() => {
@@ -35,13 +37,20 @@ const Cart = () => {
             totalAmount = totalAmount + productTotal;
         }
     }
-    console.log(totalAmount)
+    const handleCheckout = () =>{
+        if(items.length > 0){
+            navigate('/checkout')
+        }
+        
+        
+    }
+
 
     return (
         <div>
             <SunnahLogo></SunnahLogo>
             <hr className='my-5 mb-20' />
-            <div className='flex justify-center container mx-auto'>
+            <div className='flex justify-center container  mx-auto'>
                 <div className=' rounded-xl shadow-2xl mx-5'>
                     <div data-aos="zoom-in" className='flex justify-between shadow-lg rounded-t-lg bg-secondary p-1 font-semibold text-xl'>
                         <h1 className='pr-20'>Shopping Cart</h1>
@@ -109,7 +118,7 @@ const Cart = () => {
                         </div>
                         </td>
                        <td>
-                         <button className='btn btn-sm rounded-full button'>Proceed Checkout</button>
+                         <button onClick={handleCheckout} className='btn btn-sm rounded-full button'>Proceed Checkout</button>
                         </td>
                         </tbody>
                         

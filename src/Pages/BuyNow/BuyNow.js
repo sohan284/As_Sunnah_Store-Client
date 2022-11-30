@@ -56,32 +56,9 @@ const BuyNow = () => {
 
     }
     
-    const delivered = () => {
-        const val = document.getElementById('quantity_value').value;
-        const intVal = parseInt(val)
-        if (intVal > 0 && intVal <= product.quantity) {
-            const availableQuantity = product.quantity - intVal;
-            const updateQuantity = { availableQuantity };
-
-
-
-            fetch(`https://as-sunnah.herokuapp.com/product/${productId}`, {
-                method: 'PUT',
-                headers: {
-                    'content-type': "application/json"
-                },
-                body: JSON.stringify(updateQuantity)
-            })
-
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById('quantity_value').value = "0";
-                    toast.success(`${intVal} Items Ordered Successful`)
-                    setQuantity(data);
-                })
-        }
-        else errorMessage = <p className='text-[red] my-3 font-semibold text-sm'>Please Enter a valid quantity</p>
-    }
+    const delivered = (id) => {
+    navigate(`/checkout/${id}`)
+}
 
     const handleAddtoCart = () => {
         const val = document.getElementById('quantity_value').value;
@@ -103,7 +80,7 @@ const BuyNow = () => {
                     setQuantity(data);
                 })
 
-        } 
+        }
         const newCart = {
             "_id" : product._id,
             "user" : user.email,
@@ -171,7 +148,7 @@ const BuyNow = () => {
                                 <h3 className="font-bold text-lg">Are you sure want to {product.name}</h3>
 
                                 <div className="modal-action">
-                                    <label onClick={delivered} htmlFor="my-modal" className="btn-sm bg-[#019601] btn">Yes</label>
+                                    <label onClick={()=>delivered(product._id)} htmlFor="my-modal" className="btn-sm bg-[#019601] btn">Yes</label>
                                     <label htmlFor="my-modal" className="btn btn-sm right-2 top-2 bg-[#ff0000cb]">✕</label>
 
                                 </div>

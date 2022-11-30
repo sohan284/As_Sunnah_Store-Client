@@ -31,6 +31,10 @@ import AddProduct from './Pages/Home/Admin/AddProduct';
 import ManageProduct from './Pages/Home/Admin/ManageProduct';
 import UpdateProduct from './Pages/Home/Admin/UpdateProduct';
 import ContactUs from './Pages/Home/ContactUs';
+import Checkout from './Pages/Cart/Checkout';
+import MyOrder from './Pages/Cart/MyOrder';
+import AllOrders from './Pages/Home/Admin/AllOrders';
+import CheckoutOne from './Pages/BuyNow/CheckoutOne';
 
 function App() {
   return (
@@ -65,12 +69,23 @@ function App() {
               <Users></Users>
             </RequireAdmin>
           }></Route>
+
+          <Route path='/allOrders' element={
+            <RequireAdmin>
+              <AllOrders></AllOrders>
+            </RequireAdmin>
+          }></Route>
+         
         </Route>
+        <Route path='/myOrder' element={
+              <MyOrder></MyOrder>
+          }></Route>
         <Route path='donation' element={<Donation></Donation>}></Route>
         <Route path='orphanage' element={<OrphanageDetails></OrphanageDetails>}></Route>
         <Route path='oldagehome' element={<OldAgeHomeDetails></OldAgeHomeDetails>}></Route>
         <Route path='contactus' element={<ContactUs></ContactUs>}></Route>
-
+        <Route path='checkout' element={<Checkout></Checkout>}></Route>
+      
 
 
 
@@ -87,6 +102,12 @@ function App() {
         <Route path='/buynow/:productId' element={
           <RequireAuth>
             <BuyNow></BuyNow>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/checkout/:productId' element={
+          <RequireAuth>
+            <CheckoutOne></CheckoutOne>
           </RequireAuth>
         }></Route>
 

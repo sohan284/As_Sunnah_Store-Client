@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import SunnahLogo from '../../Shared/SunnahLogo';
 
 
-const Checkout = ({ amount }) => {
+const CheckoutOne = ({ amount }) => {
+    const { productId } = useParams();
     const [user] = useAuthState(auth);
     const [value, setValue] = useState();
     const [address,setAddress] = useState();
@@ -16,27 +17,19 @@ const Checkout = ({ amount }) => {
     const [country, setCountry] = useState();
     const [number, setNumber] = useState();
     const [delivery, setDelivery] = useState();
-    const [items,setItem] = useState();
+    const [item,setItem] = useState();
     const navigate = useNavigate();
     let totalAmount = 0;
 
   
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/cart/${user?.email}`)
+        fetch(`https://as-sunnah.herokuapp.com/product/${productId}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
 
-    if (items) {
-        for (const item of items) {
-            const productTotal = item.price * item.orderQuantity;
-            totalAmount = totalAmount + productTotal;
-        }
-    }
-
     const handlePlaceOrder = event =>{
         event.preventDefault()
-        
         const data = {
             name: user.displayName,
             user: user.email,
@@ -44,8 +37,8 @@ const Checkout = ({ amount }) => {
             district : district,
             country : country,
             number : number ,
-            Payable : totalAmount,
-            order : items
+            Payable : item.price,
+            order :[item]
         }
         const url = `https://as-sunnah.herokuapp.com/order`;
         fetch(url, {
@@ -58,17 +51,8 @@ const Checkout = ({ amount }) => {
             .then(res => res.json())
             .then(result => {
                 toast.success("Ordered Successful")
+                navigate('/')
             })
-
-            fetch(`https://as-sunnah.herokuapp.com/cart/order/${user?.email}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    navigate('/');
-                })
-        
-
     }
     return (
         <div>
@@ -168,24 +152,23 @@ const Checkout = ({ amount }) => {
                    <h1 className='font-bold pl-1 text-[10px]'>Your Order</h1>
 
                    <div className='grid gap-5 grid-cols-3 lg:grid-cols-5 my-2 bg-gray-200 rounded p-1'>
-                   {
-                        items?.map(i => <div>
+                 
+                        <div>
                             <div className=' w-56'>
                             <div className='flex items-center'>
-                            <img className='w-10 rounded-full' src={i.img} alt="" />
-                            <h1 className='font-semibold ml-2 text-xs'>{i.name.slice(2,15)}...</h1>
+                            <img className='w-10 rounded-full' src={item?.img} alt="" />
+                            <h1 className='font-semibold ml-2 text-xs'>{item?.name}...</h1>
                             </div>
                           
-                            <h1 className='text-red-600 ml-2 font-semibold'>X {i.orderQuantity}</h1>
-                            
+                                               
                             </div>
                             
-                        </div>)
-                    }
+                        </div>
+                   
                    </div>
                    <div className='flex text-red-500 font-semibold'>
                         <h1 className='my-1'>Total Payable Amount :</h1> 
-                        <h2 className='ml-5 my-1'>{totalAmount}TK</h2>
+                        <h2 className='ml-5 my-1'>{item?.price}TK</h2>
                     </div>
                     <h1 className='font-bold pl-1  text-[10px]'>Payment Method</h1>
                     <select     required onClick={(e) => { setDelivery(e.target.value) }} className='my-2 shadow-lg border rounded-md p-1'  >
@@ -199,4 +182,4 @@ const Checkout = ({ amount }) => {
     );
 };
 
-export default Checkout;
+export default CheckoutOne;
