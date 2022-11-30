@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import SunnahLogo from '../../../Shared/SunnahLogo';
 import Footer from './../../../Shared/Footer';
 
 const OldAgeHomeDetails = () => {
+    const navigate = useNavigate()
+
+    const handlePayment = () =>{
+        navigate('/payment')
+    }
     return (
         <div className='container mx-auto' >
             <SunnahLogo></SunnahLogo>
@@ -10,12 +16,12 @@ const OldAgeHomeDetails = () => {
 
             <div data-aos="zoom-in">
                 <div className='oldagehomedetails'>
-                    <h1 className='text-center text-[#eaf5ac] mt-10 text-4xl font-bold p-3'>Help Build An Old Age Home In Bangladesh</h1>
-
-                    <p className='my-5 p-3 text-[#fdfdfd] '>
+                    <h1 className='text-center  mt-10 text-4xl font-bold p-3'>Help Build An Old Age Home In Bangladesh</h1>
+                    <p className='my-5 p-3  '>
                         Old age Homes in Bangladesh provide high quality old age care service all over bangladesh. Elderly Home care or simple Old age Homes in Bangladesh (also called elder care in some English-speaking countries) are designed to meet the special needs of the elderly. This general term includes services such as long-term care, adult day care, long-term care, nursing homes (often called inpatient care), hospice care, and home care. For example, in many Asian countries, government-regulated elderly care is rarely used, and traditional care is the first choice for younger family members. Citizens who want to live elegantly and need daily help and medical assistance.
 
                         This is an important difference, because housing design, services, activities, staff training, etc. should really be customer-centric. Old age Homes in Bangladesh should also point out that most of the care services for the elderly in the world are in the unpaid market. Adults vary greatly from country to country and are changing rapidly. Even within a country, elderly care will vary from region to region. However, all over the world, it is observed that the elderly bear most of the health care costs of different age groups.
+import { useNavigate } from 'react-router-dom';
 
                         You can read, In Home Senior Care Services
 
@@ -24,9 +30,8 @@ const OldAgeHomeDetails = () => {
                         <span className='font-semibold'>"May Allah reward you"</span>
                     </p>
                 </div>
-
                 <div className='flex justify-center my-5'>
-                    <button className='btn button'>Donate Now</button>
+                    <button onClick={handlePayment} className='btn button'>Donate Now</button>
                 </div>
                 <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 p-3'>
                     <img className='rounded' data-aos="zoom-in" data-aos-duration="500" src=" https://i.ibb.co/BBjj5W3/09.jpg" alt="" />
@@ -37,13 +42,10 @@ const OldAgeHomeDetails = () => {
                     <img className='rounded w-80 lg:h-56' data-aos="zoom-in" data-aos-duration="1500" src="https://i.ibb.co/hdwnsDj/download-2.jpg" alt="" />
                     <img className='rounded w-80 lg:h-56' data-aos="zoom-in" data-aos-duration="1700" src="https://i.ibb.co/xjcqhfS/download-3.jpg" alt="" />
                     <img className='rounded w-80 lg:h-56' data-aos="zoom-in" data-aos-duration="1900" src="https://i.ibb.co/RGXwhN6/download-4.jpg" alt="" />
-
                 </div>
             </div>
             <hr className='my-5' />
             <Footer></Footer>
-
-
         </div>
     );
 };

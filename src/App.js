@@ -35,6 +35,7 @@ import Checkout from './Pages/Cart/Checkout';
 import MyOrder from './Pages/Cart/MyOrder';
 import AllOrders from './Pages/Home/Admin/AllOrders';
 import CheckoutOne from './Pages/BuyNow/CheckoutOne';
+import Payment from './Pages/Home/Donation/Payment';
 
 function App() {
   return (
@@ -51,7 +52,6 @@ function App() {
           <Route path='tasbih' element={<Tasbih></Tasbih>}></Route>
           <Route path='attar' element={<Attar></Attar>}></Route>
           <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
-
           <Route path='/addProduct' element={
             <RequireAdmin>
               <AddProduct></AddProduct>
@@ -75,7 +75,6 @@ function App() {
               <AllOrders></AllOrders>
             </RequireAdmin>
           }></Route>
-         
         </Route>
         <Route path='/myOrder' element={
               <MyOrder></MyOrder>
@@ -85,20 +84,12 @@ function App() {
         <Route path='oldagehome' element={<OldAgeHomeDetails></OldAgeHomeDetails>}></Route>
         <Route path='contactus' element={<ContactUs></ContactUs>}></Route>
         <Route path='checkout' element={<Checkout></Checkout>}></Route>
-      
-
-
-
-
+        <Route path='payment' element={<Payment></Payment>}></Route>
         <Route path='/manageProduct/:productId' element={
           <RequireAdmin>
             <UpdateProduct></UpdateProduct>
           </RequireAdmin>
         }></Route>
-
-
-
-
         <Route path='/buynow/:productId' element={
           <RequireAuth>
             <BuyNow></BuyNow>
@@ -121,6 +112,9 @@ function App() {
 
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
+      
+      
+
       </Routes>
       <ToastContainer />
     </div>

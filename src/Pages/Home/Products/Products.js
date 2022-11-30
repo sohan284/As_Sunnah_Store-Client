@@ -63,7 +63,7 @@ const Products = () => {
                 }
 
             </div>
-            <div className='pagination mt-5 grid grid-cols-12 bg-slate-200'>
+            <div data-aos="zoom-in" className='pagination mt-5 grid grid-cols-12 bg-slate-200'>
             {
                         [...Array(pageCount).keys()]
                         .map(number => <div className=''>
@@ -78,6 +78,7 @@ const Products = () => {
                     <option value="10" selected>10</option>
                 </select>
             </div>
+            
 
         </div>
 

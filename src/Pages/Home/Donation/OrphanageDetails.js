@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../../../Shared/Footer';
 import SunnahLogo from './../../../Shared/SunnahLogo';
 
 const OrphanageDetails = () => {
+    const navigate = useNavigate()
+
+    const handlePayment = () =>{
+        navigate('/payment')
+    }
     return (
         <div  className='container mx-auto'>
             <SunnahLogo></SunnahLogo>
@@ -26,7 +32,7 @@ const OrphanageDetails = () => {
                     <span className='font-semibold'>"May Allah reward you"</span>
                 </p>
                 <div className='flex justify-center my-5'>
-                <button className='btn button'>Donate Now</button>
+                <button onClick={handlePayment} className='btn button'>Donate Now</button>
                 </div>
                 <div className='grid grid-cols-2 lg:grid-cols-4 gap-2 p-3'>
                     <img className='rounded' data-aos="zoom-in" data-aos-duration="500" src="https://i.ibb.co/jvfD927/bidyanondo-project-images-38.jpg" alt="" />
