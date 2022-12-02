@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import Header from '../../../Shared/Header';
-import SunnahLogo from '../../../Shared/SunnahLogo';
-import Home from '../Home';
 
 const AddProduct = () => {
     const [pvalue, setPValue] = useState();
@@ -36,7 +33,7 @@ const AddProduct = () => {
             img: img
 
         }
-        const url = `https://as-sunnah.herokuapp.com/product`;
+        const url = `https://as-sunnah-venture.onrender.com/product`;
         fetch(url, {
             method: 'POST',
             headers: {

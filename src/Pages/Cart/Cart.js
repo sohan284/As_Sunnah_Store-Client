@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import SunnahLogo from '../../Shared/SunnahLogo';
 import Footer2 from './../../Shared/Footer2';
-import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const [items, setItem] = useState();
@@ -12,12 +12,12 @@ const Cart = () => {
     let totalAmount = 0;
 
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/cart/${user?.email}`)
+        fetch(`https://as-sunnah-venture.onrender.com/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
     const handleDeleteCart = (id) => {
-        fetch(`https://as-sunnah.herokuapp.com/cart/${id}`, {
+        fetch(`https://as-sunnah-venture.onrender.com/cart/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

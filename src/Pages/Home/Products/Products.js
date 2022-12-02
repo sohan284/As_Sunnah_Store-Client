@@ -8,13 +8,13 @@ const Products = () => {
     const [page,setPage] = useState()
     const [size ,setSize] =useState(10);
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/product?page=${page}&size=${size}`)
+        fetch(`https://as-sunnah-venture.onrender.com/product?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data =>setProduct(data))
 
     }, [page , size])
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/productCount`)
+        fetch(`https://as-sunnah-venture.onrender.com/productCount`)
             .then(res => res.json())
             .then(data =>{
                 const count = data.count;

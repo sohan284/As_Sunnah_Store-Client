@@ -19,7 +19,7 @@ const BuyNow = () => {
 
 
     useEffect(() => {
-        const url = `https://as-sunnah.herokuapp.com/product/${productId}`;
+        const url = `https://as-sunnah-venture.onrender.com/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -67,7 +67,7 @@ const BuyNow = () => {
             const availableQuantity = product.quantity - orderQuantity;
             const updateQuantity = { availableQuantity };
             
-            fetch(`https://as-sunnah.herokuapp.com/product/${productId}`, {
+            fetch(`https://as-sunnah-venture.onrender.com/product/${productId}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': "application/json"
@@ -91,7 +91,7 @@ const BuyNow = () => {
             "img" : product.img,
             "orderQuantity" : orderQuantity
         }
-        fetch('https://as-sunnah.herokuapp.com/cart', {
+        fetch('https://as-sunnah-venture.onrender.com/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

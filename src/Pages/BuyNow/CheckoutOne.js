@@ -23,7 +23,7 @@ const CheckoutOne = ({ amount }) => {
 
   
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/product/${productId}`)
+        fetch(`https://as-sunnah-venture.onrender.com/product/${productId}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
@@ -40,7 +40,7 @@ const CheckoutOne = ({ amount }) => {
             Payable : item.price,
             order :[item]
         }
-        const url = `https://as-sunnah.herokuapp.com/order`;
+        const url = `https://as-sunnah-venture.onrender.com/order`;
         fetch(url, {
             method: 'POST',
             headers: {

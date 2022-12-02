@@ -8,7 +8,7 @@ const AddReview = ({ id }) => {
     const [user] = useAuthState(auth);
     console.log(user)
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/review/${id}`)
+        fetch(`https://as-sunnah-venture.onrender.com/review/${id}`)
             .then(res => res.json())
             .then(data => setReview(data))
         },[reviews])
@@ -23,7 +23,7 @@ const AddReview = ({ id }) => {
             rating : rating,
             feedback: feedback
         }
-        fetch(`https://as-sunnah.herokuapp.com/review`, {
+        fetch(`https://as-sunnah-venture.onrender.com/review`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

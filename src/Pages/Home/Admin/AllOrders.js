@@ -4,14 +4,14 @@ const AllOrders = () => {
     const [orders,setOrder] = useState()
 
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/order`)
+        fetch(`https://as-sunnah-venture.onrender.com/order`)
             .then(res => res.json())
             .then(data => setOrder(data))
     })
 
     const handleDeleteOrder = (id) => {
         console.log(id);
-        fetch(`https://as-sunnah.herokuapp.com/order/${id}`, {
+        fetch(`https://as-sunnah-venture.onrender.com/order/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

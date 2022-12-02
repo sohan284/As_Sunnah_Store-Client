@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
-import Footer2 from './../../../Shared/Footer2';
 
 const Users = () => {
     const [dUsers, setDuser] = useState();
     const [users,setUser] = useState()
     console.log(users)
     useEffect(() => {
-        fetch(`https://as-sunnah.herokuapp.com/user`
+        fetch(`https://as-sunnah-venture.onrender.com/user`
             , {
                 method: 'GET',
                 headers: {
@@ -19,7 +18,7 @@ const Users = () => {
             .then(data => setUser(data))
     }, [users])
     const makeAdmin = (email) =>{
-        fetch(`https://as-sunnah.herokuapp.com/user/admin/${email}`,{
+        fetch(`https://as-sunnah-venture.onrender.com/user/admin/${email}`,{
             method: 'PUT',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -39,7 +38,7 @@ const Users = () => {
         })
     }
     const handleDeleteUser = (id) => {
-        fetch(`https://as-sunnah.herokuapp.com/user/${id}`, {
+        fetch(`https://as-sunnah-venture.onrender.com/user/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
