@@ -9,7 +9,7 @@ const MyOrder = () => {
     const [user] = useAuthState(auth);
 
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/order/${user?.email}`)
+        fetch(`https://assunnahstore.up.railway.app/order/${user?.email}`)
             .then(res => res.json())
             .then(data => setOrder(data))
     })

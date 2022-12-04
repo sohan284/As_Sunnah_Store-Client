@@ -10,7 +10,7 @@ const UpdateProduct = ({ id }) => {
     console.log(productId);
     const [product, setProduct] = useState();
     useEffect(() => {
-        const url = `https://as-sunnah-venture.onrender.com/product/${productId}`;
+        const url = `https://assunnahstore.up.railway.app/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -30,7 +30,7 @@ const UpdateProduct = ({ id }) => {
             img : img 
 
         }
-        fetch(`https://as-sunnah-venture.onrender.com/product/manage/${productId}`, {
+        fetch(`https://assunnahstore.up.railway.app/product/manage/${productId}`, {
             method: 'PUT',
             headers: {
                 'content-type': "application/json"

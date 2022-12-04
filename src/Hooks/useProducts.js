@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const useProducts = () => {
     const [products, setProduct] = useState([]);
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/product`)
+        fetch(`https://assunnahstore.up.railway.app/product`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])

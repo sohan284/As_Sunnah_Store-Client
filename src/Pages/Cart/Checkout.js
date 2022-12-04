@@ -22,7 +22,7 @@ const Checkout = ({ amount }) => {
 
   
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/cart/${user?.email}`)
+        fetch(`https://assunnahstore.up.railway.app/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
@@ -47,7 +47,7 @@ const Checkout = ({ amount }) => {
             Payable : totalAmount,
             order : items
         }
-        const url = `https://as-sunnah-venture.onrender.com/order`;
+        const url = `https://assunnahstore.up.railway.app/order`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -60,7 +60,7 @@ const Checkout = ({ amount }) => {
                 toast.success("Ordered Successful")
             })
 
-            fetch(`https://as-sunnah-venture.onrender.com/cart/order/${user?.email}`, {
+            fetch(`https://assunnahstore.up.railway.app/cart/order/${user?.email}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

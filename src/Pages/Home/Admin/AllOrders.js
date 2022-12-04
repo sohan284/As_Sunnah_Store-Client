@@ -4,14 +4,14 @@ const AllOrders = () => {
     const [orders,setOrder] = useState()
 
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/order`)
+        fetch(`https://assunnahstore.up.railway.app/order`)
             .then(res => res.json())
             .then(data => setOrder(data))
     })
 
     const handleDeleteOrder = (id) => {
         console.log(id);
-        fetch(`https://as-sunnah-venture.onrender.com/order/${id}`, {
+        fetch(`https://assunnahstore.up.railway.app/order/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

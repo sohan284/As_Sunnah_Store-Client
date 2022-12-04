@@ -10,7 +10,7 @@ const useToken = user => {
         const currentUser = {email : email , name : name , photoURL : photoURL };
         console.log(user)
         if(email){
-            fetch(`https://as-sunnah-venture.onrender.com/user/${email}`,{
+            fetch(`https://assunnahstore.up.railway.app/user/${email}`,{
                 method:'PUT',
                 headers:{
                     'content-type':'application/json'

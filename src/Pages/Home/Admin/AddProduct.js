@@ -33,7 +33,7 @@ const AddProduct = () => {
             img: img
 
         }
-        const url = `https://as-sunnah-venture.onrender.com/product`;
+        const url = `https://assunnahstore.up.railway.app/product`;
         fetch(url, {
             method: 'POST',
             headers: {

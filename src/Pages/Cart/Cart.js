@@ -12,12 +12,12 @@ const Cart = () => {
     let totalAmount = 0;
 
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/cart/${user?.email}`)
+        fetch(`https://assunnahstore.up.railway.app/cart/${user?.email}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
     const handleDeleteCart = (id) => {
-        fetch(`https://as-sunnah-venture.onrender.com/cart/${id}`, {
+        fetch(`https://assunnahstore.up.railway.app/cart/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

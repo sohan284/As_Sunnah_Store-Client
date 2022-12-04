@@ -23,7 +23,7 @@ const CheckoutOne = ({ amount }) => {
 
   
     useEffect(() => {
-        fetch(`https://as-sunnah-venture.onrender.com/product/${productId}`)
+        fetch(`https://assunnahstore.up.railway.app/product/${productId}`)
             .then(res => res.json())
             .then(data => setItem(data))
     })
@@ -40,7 +40,7 @@ const CheckoutOne = ({ amount }) => {
             Payable : item.price,
             order :[item]
         }
-        const url = `https://as-sunnah-venture.onrender.com/order`;
+        const url = `https://assunnahstore.up.railway.app/order`;
         fetch(url, {
             method: 'POST',
             headers: {
