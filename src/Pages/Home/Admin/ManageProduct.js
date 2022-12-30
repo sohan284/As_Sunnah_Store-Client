@@ -8,7 +8,7 @@ const ManageProduct = () => {
     const navigate = useNavigate();
 
     const handleDeleteProduct = (id) =>{
-        fetch(`https://assunnahstore.up.railway.app/product/${id}`, {
+        fetch(`https://as-sunnah-venture.onrender.com/product/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -7,7 +7,7 @@ const Users = () => {
     const [users,setUser] = useState()
     console.log(users)
     useEffect(() => {
-        fetch(`https://assunnahstore.up.railway.app/user`
+        fetch(`https://as-sunnah-venture.onrender.com/user`
             , {
                 method: 'GET',
                 headers: {
@@ -18,7 +18,7 @@ const Users = () => {
             .then(data => setUser(data))
     }, [users])
     const makeAdmin = (email) =>{
-        fetch(`https://assunnahstore.up.railway.app/user/admin/${email}`,{
+        fetch(`https://as-sunnah-venture.onrender.com/user/admin/${email}`,{
             method: 'PUT',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -38,7 +38,7 @@ const Users = () => {
         })
     }
     const handleDeleteUser = (id) => {
-        fetch(`https://assunnahstore.up.railway.app/user/${id}`, {
+        fetch(`https://as-sunnah-venture.onrender.com/user/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
