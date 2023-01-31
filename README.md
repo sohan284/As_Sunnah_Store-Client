@@ -1,6 +1,9 @@
 # Name of the Project       	:  AS SUNNAH VENTURE 
+Type of Project 		:  E-commerce
 
-# Features		:
+Server Site Link		:  https://github.com/sohan284/As_Sunnah_Store-Server
+
+## Features		:
 
  * Log in and signup with email and password. Also can log in with google.
  * Homepage has some products with specific details .
